@@ -15,10 +15,10 @@
   <body>
     <%= render 'shared/navbar' %>
     <%= yield %>
+
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
+    <%= render 'shared/flashes' %>
   </body>
-  <p class="notice"><%= notice %></p>
-  <p class="alert"><%= alert %></p>
 </html>
