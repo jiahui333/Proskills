@@ -1,0 +1,15 @@
+<div class="container">
+  <h2>Buttons</h2>
+  <h3><%=link_to "Join us", "pages#home", class:"button-primary"%></h3>
+  <div class="card-student">
+    <p>You want to learn programming languages?</p>
+    <%= link_to "Explore", "skills#index", class:"button-primary button-primary-small" %>
+  </div>
+  <div class ="card-job">
+    <p>You want to find a job?</p>
+    <p><%= link_to "Find job", "jobs#index", class:"button-primary button-primary-small" %></p>
+  </div>
+  <h2>banner</h2>
+  <%= render "shared/banner" %>
+</div>
+<h2>forms</h2>
