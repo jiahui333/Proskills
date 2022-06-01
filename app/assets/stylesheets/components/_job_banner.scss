@@ -1,0 +1,58 @@
+.job-banner{
+  padding-top: 100px;
+  background-color: $lightblue;
+  color: $lightpurple;
+  height: 300px;
+
+  .banner-text{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+    .fa-brands{
+      color: $darkblue;
+      position: absolute;
+      font-size: 1.5rem;
+    }
+
+    .fa-css3{
+      top: -30%;
+      right: 5%;
+    }
+
+    .fa-js{
+      top: -30%;
+      left: 0;
+    }
+
+    .fa-html5{
+      right: 30%;
+      top: -60%;
+    }
+
+    .fa-python{
+      left: 10%;
+      bottom: -50%;
+    }
+
+    .fa-php{
+      right: 10%;
+    }
+
+    .fa-java{
+      bottom: -65%;
+      left: 35%;
+    }
+
+    .fa-r-project{
+      bottom: -75%;
+      right: 35%;
+    }
+
+    .fa-golang{
+      top: -68%;
+      left: 30%;
+    }
+  }
+}

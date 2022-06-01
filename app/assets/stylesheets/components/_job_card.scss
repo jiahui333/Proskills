@@ -1,0 +1,36 @@
+.job-card{
+  background-color: $lightblue;
+  color: $darkpurple;
+  height: 320px;
+  width: 260px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  padding: 20px;
+  color: $darkpurple;
+
+  transition: 0.1s;
+  backface-visibility: hidden;
+  transform: translateZ(0.2s);
+
+    h3{
+      color: $lightpurple;
+    }
+    .job-top p{
+      display: inline
+    }
+
+    hr {
+    border: none;
+    border-top: 0.3rem dotted $darkblue;
+    height: 1px;
+    background-color: transparent;
+    opacity: .8;
+  }
+
+  &:hover{
+    box-shadow: 0.5rem 0.5rem $lightpurple;
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+}
