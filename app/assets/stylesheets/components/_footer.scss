@@ -1,0 +1,59 @@
+footer{
+  height: 260px;
+  background-color: $lightpurple;
+
+  .footer-flex{
+    display:flex;
+    justify-content: space-between;
+    padding: 3rem 4rem 2rem 4rem;
+    h1{
+      color: $lightblue;
+    }
+
+    p{
+      color: $white;
+      margin-bottom: 0.5rem;
+    }
+
+    ul{
+      li{
+        color: $white;
+        font-weight: bold;
+        text-align: right;
+        list-style-type: none;
+
+        &:first-child{
+          margin-bottom: 1rem;
+        }
+
+      }
+
+      a{
+        font-weight: normal;
+        color: $white;
+        text-decoration: none;
+
+        &:hover{
+          color: $lightblue;
+        }
+      }
+    }
+
+    .footer-right{
+      display: flex;
+
+      .help, .follow{
+        text-align: right;
+      }
+
+    }
+  }
+
+  .company-symbol{
+    text-align: right;
+    margin-right: 4rem;
+    color: $white;
+    font-size: 0.75rem;
+  }
+
+}
