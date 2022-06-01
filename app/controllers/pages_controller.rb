@@ -4,4 +4,7 @@ class PagesController < ApplicationController
 
   def ui
   end
+
+  def index
+  end
 end
