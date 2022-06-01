@@ -1,0 +1,40 @@
+.card-job {
+position: absolute;
+width: 251px;
+height: 309px;
+left: 1020px;
+top: 236px;
+background: $darkblue;
+-webkit-transition:  box-shadow .6s ease-out;
+box-shadow: 8px .9px 3px grey;
+border-radius: 10px;
+color: $darkpurple;
+padding: 40px;
+}
+
+.card-job:hover {
+box-shadow: 12px 12px 10px grey;
+-webkit-transition:  box-shadow .1s ease-in;
+}
+
+// Cards Student
+
+.card-student {
+  position: absolute;
+  width: 251px;
+  height: 309px;
+  left: 740px;
+  top: 337px;
+  background: $lightblue;
+  padding: 40px;
+  // box-shadow: 0px 0px 0px grey;
+  -webkit-transition:  box-shadow .6s ease-out;
+  box-shadow: 8px .9px 3px grey;
+  border-radius: 10px;
+  color: $darkpurple;
+  }
+
+  .card-student:hover {
+    box-shadow: 12px 12px 10px grey;
+    -webkit-transition:  box-shadow .1s ease-in;
+  }
