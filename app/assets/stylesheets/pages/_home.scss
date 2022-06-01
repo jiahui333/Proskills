@@ -22,18 +22,19 @@ main{
 
     img{
       height:360px;
+      z-index: 1;
     }
 
     .student{
       position: absolute;
       top: 20%;
-      z-index:-1;
+      z-index: 0;
     }
 
     .jobseeker{
       position: absolute;
       left: 50%;
-      z-index: -1;
+      z-index: 0;
     }
 
     .quote{
@@ -50,12 +51,14 @@ main{
     }
 
     .quote-jobseeker{
+      z-index: -1;
       position: absolute;
       right: -50%;
       top: -10%;
     }
 
     .quote-student{
+      z-index: -1;
       position: absolute;
       left: 60%;
       top: -5%;

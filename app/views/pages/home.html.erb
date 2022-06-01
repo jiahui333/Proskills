@@ -9,28 +9,20 @@
   <div class="home-right col-8">
     <div class="student">
       <%= image_tag "landing/student.png", class:"student-img" %>
-
-      <div class="flip-card-student">
-        <div class="flip-card-student-front">
+      <%= link_to skills_path do %>
           <div class="quote quote-student">
             <p>"I want to learn programming"</p>
           </div>
-        </div>
-
-        <div class="flip-card-student-back">
-          <div class="quote quote-student">
-            <p>Explore programming skills</p>
-          </div>
-        </div>
-      </div>
-
+      <% end %>
     </div>
 
     <div class="jobseeker">
-      <%= image_tag "landing/jobseeker.png", class:"jobseeker-img" %>
+      <%= image_tag "landing/jobseeker.png"%>
+      <%= link_to jobs_path do %>
       <div class="quote quote-jobseeker">
         <p>"I want to find a programming job"</p>
       </div>
+      <% end %>
     </div>
   </div>
 
