@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
 main{
-  height: 100vh;
+  height: 90vh;
   padding: 100px 150px 0;
 
   .home-left{
@@ -28,13 +28,14 @@ main{
     .student{
       position: absolute;
       top: 20%;
-      z-index: 0;
+      left: 4%;
+      z-index: 1;
     }
 
     .jobseeker{
       position: absolute;
-      left: 50%;
-      z-index: 0;
+      left: 54%;
+      z-index: 1;
     }
 
     .quote{
@@ -47,18 +48,16 @@ main{
       align-items: center;
       text-align: center;
       box-shadow: 3px 3px $darkblue;
-      z-index: -2;
+      z-index: -1;
     }
 
     .quote-jobseeker{
-      z-index: -1;
       position: absolute;
       right: -50%;
       top: -10%;
     }
 
     .quote-student{
-      z-index: -1;
       position: absolute;
       left: 60%;
       top: -5%;
