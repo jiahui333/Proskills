@@ -13,7 +13,9 @@
   </head>
 
   <body>
+    <% if !current_page?("/steptwo") %>
     <%= render 'shared/navbar' %>
+    <% end %>
     <div style="height:96.37px;"></div>
     <%= yield %>
     <%= render 'shared/footer' %>

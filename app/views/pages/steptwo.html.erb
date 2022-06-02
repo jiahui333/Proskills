@@ -1,7 +1,10 @@
 <div class="container ">
-  <div class="form">
+  <div class="form form-2">
     <h2 class="header-form">Give us some more Information</h2>
     <form>
+
+    <hr>
+
       <label class="input" ><h4>What programming skills do you have?</h4></label>
       <div class="checkboxes-skill row w-75 m-auto" >
         <div class="tag-item col-4">
@@ -36,32 +39,44 @@
         <input type="input" class="input1">
       </div>
 
+        <hr>
+
       <div>
         <label class="input2" ><h4>What are your interests?</h4></label>
       </div>
 
-      <div class="checkbox-job row m-auto">
+      <div class="checkbox-job row w-75 m-auto">
         <div class="tag-item col-4">
           <input class="tag-selector" type="checkbox" id="Front-end">
-          <label for="Front-end">Front-End</label>
+          <label style="width: 100%;" for="Front-end">Front-End</label>
         </div>
 
         <div clas="tag-item col-4" style="width: auto;">
           <input class="tag-selector" type="checkbox" id="Back-End">
-          <label for="Back-End">Back-End</label>
+          <label style="width: 100%;" for="Back-End">Back-End</label>
         </div>
 
         <div class="tag-item col-4">
           <input class="tag-selector" type="checkbox" id="Full-Stack">
-          <label for="Full-Stack">Full-Stack</label>
+          <label style="width: 100%; " for="Full-Stack">Full-Stack</label>
         </div>
       </div>
+
+      <hr>
+
       <div>
         <label class="input3" ><h4>Did you already work as a developer?</h4></label>
-        <input type="checkbox" class="developer">
-        <label for="developer">Yes</label>
+        <fieldset class="form-group boolean optional snippet_archived">
+          <div class="form-check">
+            <input name="snippet[archived]" type="hidden" value="0">
+            <input class="form-check-input boolean optional toggle" type="checkbox" value="1" name="snippet[archived]" id="snippet_archived">
+            <label class="form-check-label boolean optional" for="snippet_archived">Yes</label>
+          </div>
+        </fieldset>
+        <%# <input type="checkbox" class="toggle">
+        <label for="developer">Yes</label> %>
       </div>
-      <input type="submit" name="Submit" class="button-primary button-primary-small mt-5" value="Submit">
+      <input type="submit" name="Submit" class="button-primary mt-5" value="Submit">
     </form>
   </div>
 </div>
