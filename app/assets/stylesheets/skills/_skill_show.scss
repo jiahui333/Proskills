@@ -1,0 +1,92 @@
+.show-page{
+  height: auto;
+}
+
+.skill-top{
+  p{
+    margin-top: 1rem;
+  }
+}
+
+
+
+hr{
+  padding: 1rem;
+  border-top: 3px solid $lightpurple;
+  background-color: transparent;
+  opacity: .5;
+}
+
+.skill-bottom{
+  position: relative;
+  height: 300px;
+  .skill-person{
+
+    .quote{
+      color: $darkpurple;
+      height: 205px;
+      width: 205px;
+      border-radius: 50%;
+      background-color: $lightblue;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      box-shadow: 3px 3px $darkblue;
+      z-index: 1;
+      padding: 25px;
+
+      position: absolute;
+      top: -420px;
+      left: 180px;
+    }
+
+    img{
+      height: 310px;
+      position: absolute;
+      top: -400px;
+      z-index: 1;
+    }
+  }
+
+
+
+  .resources{
+    margin-bottom: 500px;
+    .resources-background{
+      position: absolute;
+      top: -480px;
+    }
+
+    a{
+      text-decoration: none;
+      color: $lightpurple;
+
+      &:hover{
+        color: $darkpurple;
+      }
+    }
+    .resources-cards{
+      height: 240px;
+      width: 280px;
+      background-color: $white;
+      position: absolute;
+    }
+    .resources-card1{
+      left: 120px;
+      top: -60px;
+      border-radius: 10px;
+    }
+    .resources-card2{
+      left: 500px;
+      top: -190px;
+      border-radius: 10px;
+    }
+    .resources-card3{
+      left: 880px;
+      top: -320px;
+      border-radius: 10px;
+    }
+
+
+  }
+}
