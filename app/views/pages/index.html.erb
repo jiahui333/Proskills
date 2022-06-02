@@ -1,35 +1,85 @@
 <link rel="stylesheet" href="skills.scss">
- <div class="container">
-    <div class="row justify-content-center">
-      <div class="col-sm-8 text-center">
-        <h3>Select your skills:</h3>
-
-        <div class="d-flex flex-wrap justify-content-center pt-4">
-          <div class="clickable">
-            <ion-icon name="logo-html5"></ion-icon>
-            <small>HTML</small>
-          </div>
-          <div class="clickable">
-            <ion-icon name="logo-css3"></ion-icon>
-            <small>CSS</small>
-          </div>
-          <div class="clickable">
-            <ion-icon name="logo-nodejs"></ion-icon>
-            <small>JavaScript</small>
-          </div>
-          <div class="clickable">
-            <ion-icon name="logo-python"></ion-icon>
-            <small>Python</small>
-          </div>
-          <%# <div class="clickable">
-            <i class="fas fa-table-tennis"></i>
-            <small>PHP</small>
-          </div>
-          <div class="clickable">
-            <i class="fas fa-hiking"></i>
-            <small>Ruby</small>
-          </div> %>
-        </div>
+<%= render "components/skill_banner" %>
+<h1 class="title">learn your skills.</h1>
+<div class="container">
+  <div class="card">
+    <div class="imgbx">
+      <div class="mytext" style="height: 100%; width: 100%; background-color: #3483eb; color: white; display: flex;
+    align-items: center; justify-content: center;">
+        <h4 style="display: inline;">CSS</h4>
+     </div>
+    </div>
+    <div class="contentbx">
+      <div class="content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit!</p>
       </div>
     </div>
   </div>
+
+  <div class="card">
+    <div class="imgbx">
+      <div class="mytext" style="height: 100%; width: 100%; background-color: #eb8934; color: white; display: flex;
+    align-items: center; justify-content: center;">
+        <h4 style="display: inline;">HTML</h4>
+    </div>
+    </div>
+    <div class="contentbx">
+      <div class="content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit!</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="imgbx">
+     <div class="mytext" style="height: 100%; width: 100%; background-color: #ebd934; color: white; display: flex;
+    align-items: center; justify-content: center;">
+        <h4 style="display: inline;">JavaScript</h4>
+        </div>
+    </div>
+    <div class="contentbx">
+      <div class="content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit!</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgbx">
+       <div class="mytext" style="height: 100%; width: 100%;  background: linear-gradient(0deg, rgba(51,34,195,1) 16%, rgba(255,254,29,1) 86%); color: white; display: flex;
+    align-items: center; justify-content: center;">
+        <h4 style="display: inline;">Python</h4>
+        </div>
+    </div>
+    <div class="contentbx">
+      <div class="content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit!</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgbx">
+      <div class="mytext" style="height: 100%; width: 100%; background-color: #858eba; color: white; display: flex;
+    align-items: center; justify-content: center;">
+        <h4 style="display: inline;">PHP</h4>
+        </div>
+    </div>
+    <div class="contentbx">
+      <div class="content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit!</p>
+      </div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="imgbx">
+      <div class="mytext" style="height: 100%; width: 100%; background-color: #9b2015; color: white; display: flex;
+    align-items: center; justify-content: center;">
+        <h4 style="display: inline;">Ruby</h4>
+        </div>
+    </div>
+    <div class="contentbx">
+      <div class="content">
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit!</p>
+      </div>
+    </div>
+  </div>
+</div>

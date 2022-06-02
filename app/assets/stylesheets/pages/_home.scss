@@ -1,1 +1,84 @@
 // Specific CSS for your home-page
+main{
+  height: 90vh;
+  padding: 100px 150px 0;
+
+  .home-left{
+    padding:0;
+
+    h1{
+      margin-bottom: 2rem;
+      color: $lightpurple;
+      font-size: 4rem;
+    }
+    p{
+      margin-bottom: 4rem;
+      color: $darkpurple
+    }
+  }
+
+  .home-right{
+    position:relative;
+
+    img{
+      height:360px;
+      z-index: 1;
+    }
+
+    .student{
+      position: absolute;
+      top: 20%;
+      left: 4%;
+      z-index: 1;
+    }
+
+    .jobseeker{
+      position: absolute;
+      left: 54%;
+      z-index: 1;
+    }
+
+    .quote{
+      color: $darkpurple;
+      height: 200px;
+      width: 200px;
+      border-radius: 50%;
+      background-color: $lightblue;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      box-shadow: 3px 3px $darkblue;
+      z-index: -1;
+    }
+
+    .quote-jobseeker{
+      position: absolute;
+      right: -50%;
+      top: -10%;
+    }
+
+    .quote-student{
+      position: absolute;
+      left: 60%;
+      top: -5%;
+    }
+  }
+}
+
+
+.flip-card-student-front,
+.flip-card-student-back {
+  overflow:hidden;
+  backface-visibility:hidden;
+  position:absolute;
+  transition: transform .5s linear;
+}
+.flip-card-student:hover > .flip-card-student-front{
+  transform: perspective(600px) rotateY(-180deg);
+}
+.flip-card-student:hover > .flip-card-student-back{
+  transform: perspective(600px) rotateY(0deg);
+}
+.flip-card-student-back{
+  transform:rotateY(180deg);
+}

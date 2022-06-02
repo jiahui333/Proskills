@@ -10,4 +10,10 @@ class PagesController < ApplicationController
 
   def index
   end
+
+  def stepone
+  end
+
+  def steptwo
+  end
 end
