@@ -2,7 +2,9 @@
   justify-content: space-between;
   background: $lightpurple;
   padding: 1.2rem 4rem;
-  position: sticky;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 
   h1{
     color: $lightblue;
