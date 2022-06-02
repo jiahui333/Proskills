@@ -1,0 +1,47 @@
+<main class="show-page">
+  <div class="skill-top row">
+    <div class="language-card col-4">
+      <%= image_tag "ruby_logo", class:"h-50" %>
+    </div>
+    <div class="language-intro col-8">
+      <h1> <%= @skill.name %> </h1>
+      <p><%= @skill.description %></p>
+    </div>
+  </div>
+  <hr>
+  <div class="skill-bottom">
+    <div class="skill-person">
+      <%= image_tag "skill_sitting.svg" %>
+      <div class="quote">
+        <p>"Want to learn <%= @skill.name %>? We have learning resources for you!"</p>
+      </div>
+    </div>
+
+    <div class="resources">
+      <%= image_tag "skill_background.png", class:"resources-background" %>
+      <div class="resources-cards resources-card1">
+        <h3>Beginner</h3>
+        <ul>
+          <li><%= link_to eval(@skill.resources[0])[:name], eval(@skill.resources[0])[:link] %></li>
+          <li><%= link_to eval(@skill.resources[1])[:name], eval(@skill.resources[1])[:link] %></li>
+        </ul>
+      </div>
+      <div class="resources-cards resources-card2">
+        <h3>Intermediate</h3>
+        <ul>
+          <li><%= link_to eval(@skill.resources[0])[:name], eval(@skill.resources[0])[:link] %></li>
+          <li><%= link_to eval(@skill.resources[1])[:name], eval(@skill.resources[1])[:link] %></li>
+        </ul>
+      </div>
+      <div class="resources-cards resources-card3">
+        <h3>Advanced</h3>
+        <ul>
+          <li><%= link_to eval(@skill.resources[0])[:name], eval(@skill.resources[0])[:link] %></li>
+          <li><%= link_to eval(@skill.resources[1])[:name], eval(@skill.resources[1])[:link] %></li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+
+</main>
