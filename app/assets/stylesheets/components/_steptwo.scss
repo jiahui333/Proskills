@@ -1,0 +1,77 @@
+.form {
+  height: fit-content;
+  width: 60%;
+  margin: 60px auto 60px auto;
+  padding: 50px 50px;
+  border-radius: 10px;
+  background-color: $darkblue;
+  font-size: large;
+  text-align: center;
+  color: $white;
+}
+
+.tag-item {
+  display: inline-block;
+}
+
+.tag-selector {
+  position: absolute;
+  transform: scale(0);
+}
+
+.tag-selector + label {
+  cursor: pointer;
+  display: inline-block;
+  font-size: 1.0rem;
+  border-radius: 50rem;
+  padding: 0.1rem 0.5rem;
+  background-color: $lightblue;
+  color: $darkblue;
+  border: 1px solid $lightblue;
+  margin-right: 0.6rem;
+  margin-bottom: 0.4rem;
+  margin-top: 20px;
+
+}
+
+.checkbox-job {
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.tag-selector:checked + label {
+  background-color: $lightpurple;
+  color: white;
+  border: 1px solid $lightpurple;
+}
+
+.input1 {
+  border: 1px solid $darkblue;
+  margin-top: 10px;
+}
+
+.input, .input2, .input3 {
+  margin-top: 60px;
+}
+
+.header-form {
+font-family: 'Noto Serif', serif;
+}
+
+.developer {
+  font-size: larger;
+}
+// .my-checkbox {
+//   position: absolute;
+//   transform: scale(0);
+// }
+
+// .my-checkbox + label {
+//  cursor: pointer;
+//  background-color: blue;
+// }
+
+// .my-checkbox:checked + label {
+
+//   background-color: red;
+// }
