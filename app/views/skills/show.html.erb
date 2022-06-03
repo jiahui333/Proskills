@@ -1,14 +1,14 @@
 <main class="show-page">
   <div class="skill-top row">
     <div class="language-card col-4">
-      <%= image_tag "ruby_logo", class:"h-50" %>
+      <%= image_tag "https://cdn.jsdelivr.net/gh/devicons/devicon/icons/#{@skill.name.downcase}/#{@skill.name.downcase}-original.svg", class:"skill-logo" %>
     </div>
     <div class="language-intro col-8">
       <h1> <%= @skill.name %> </h1>
       <p><%= @skill.description %></p>
     </div>
   </div>
-  <hr>
+
   <div class="skill-bottom">
     <div class="skill-person">
       <%= image_tag "skill_sitting.svg" %>
