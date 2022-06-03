@@ -23,22 +23,25 @@
       <div class="resources-cards resources-card1">
         <h3>Beginner</h3>
         <ul>
-          <li><%= link_to eval(@skill.resources[0])[:name], eval(@skill.resources[0])[:link] %></li>
-          <li><%= link_to eval(@skill.resources[1])[:name], eval(@skill.resources[1])[:link] %></li>
+          <% @beginner_resources.each do |br| %>
+            <li> <%= link_to br[:name], br[:link] %> </li>
+          <%end%>
         </ul>
       </div>
       <div class="resources-cards resources-card2">
         <h3>Intermediate</h3>
         <ul>
-          <li><%= link_to eval(@skill.resources[0])[:name], eval(@skill.resources[0])[:link] %></li>
-          <li><%= link_to eval(@skill.resources[1])[:name], eval(@skill.resources[1])[:link] %></li>
+          <% @intermediate_resources.each do |br| %>
+            <li> <%= link_to br[:name], br[:link] %> </li>
+          <%end%>
         </ul>
       </div>
       <div class="resources-cards resources-card3">
         <h3>Advanced</h3>
         <ul>
-          <li><%= link_to eval(@skill.resources[0])[:name], eval(@skill.resources[0])[:link] %></li>
-          <li><%= link_to eval(@skill.resources[1])[:name], eval(@skill.resources[1])[:link] %></li>
+          <% @advanced_resources.each do |br| %>
+            <li> <%= link_to br[:name], br[:link] %> </li>
+          <%end%>
         </ul>
       </div>
     </div>
