@@ -85,7 +85,6 @@
   transform-origin: left;
   transition-delay:2s;
   transition-duration: 3s;
-
   }
 
   .container .card:hover .contentbx .contentbx::before
@@ -165,10 +164,11 @@
   .row{
     margin-bottom: 20px;
   }
-
-.p {
-  font-size: smaller;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+.content {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  padding-left: 15px;
 }
 
 
