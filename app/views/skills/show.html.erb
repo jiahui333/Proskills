@@ -1,7 +1,7 @@
 <main class="show-page">
   <div class="skill-top row">
     <div class="language-card col-4">
-      <%= image_tag "skill_logos/#{@skill.name.downcase}.svg", class:"skill-logo" %>
+      <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo" %>
     </div>
 
     <div class="language-intro col-8">
