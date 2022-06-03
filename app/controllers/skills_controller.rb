@@ -1,9 +1,11 @@
 class SkillsController < ApplicationController
 
-  def show
-    @skill = Skill.first
-  end
   def index
     @skills = Skill.all
   end
+
+  def show
+    @skill = Skill.find(params[:id])
+  end
+
 end

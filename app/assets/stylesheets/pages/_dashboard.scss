@@ -1,0 +1,31 @@
+.dashboard-page{
+  height: 660px;
+  h1{
+    font-size: 28px;
+    &:first-child{
+      margin-bottom: 2rem;
+    }
+  }
+
+  .dashboard{
+    height: 580px;
+    width: 1000px;
+    margin: 40px auto;
+    background-color: $darkblue;
+    border-radius: 40% 60% 36% 64% / 47% 46% 54% 53%;
+
+    .dash-left{
+      padding-top: 210px;
+      padding-left: 100px;
+      color:$white;
+    }
+
+    .dash-card{
+      height: 140px;
+      width: 140px;
+      background-color: $white;
+    }
+  }
+
+
+}

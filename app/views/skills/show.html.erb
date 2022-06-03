@@ -1,14 +1,15 @@
 <main class="show-page">
   <div class="skill-top row">
     <div class="language-card col-4">
-      <%= image_tag "ruby_logo", class:"h-50" %>
+      <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo" %>
     </div>
+
     <div class="language-intro col-8">
       <h1> <%= @skill.name %> </h1>
       <p><%= @skill.description %></p>
     </div>
   </div>
-  <hr>
+
   <div class="skill-bottom">
     <div class="skill-person">
       <%= image_tag "skill_sitting.svg" %>
@@ -18,7 +19,7 @@
     </div>
 
     <div class="resources">
-      <%= image_tag "skill_background.png", class:"resources-background" %>
+      <%= image_tag "resources_background.png", class:"resources-background" %>
       <div class="resources-cards resources-card1">
         <h3>Beginner</h3>
         <ul>

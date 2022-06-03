@@ -1,25 +1,21 @@
 .show-page{
-  height: auto;
+  height: 1200px;
+  padding: 64px 140px 0;
 }
 
 .skill-top{
+  padding-bottom: 60px;
   p{
     margin-top: 1rem;
   }
-}
-
-
-
-hr{
-  padding: 1rem;
-  border-top: 3px solid $lightpurple;
-  background-color: transparent;
-  opacity: .5;
+  .skill-logo{
+  height: 120px;
+  }
 }
 
 .skill-bottom{
   position: relative;
-  height: 300px;
+
   .skill-person{
 
     .quote{
@@ -36,14 +32,14 @@ hr{
       padding: 25px;
 
       position: absolute;
-      top: -420px;
+      top: -450px;
       left: 180px;
     }
 
     img{
       height: 310px;
       position: absolute;
-      top: -400px;
+      top: -430px;
       z-index: 1;
     }
   }
@@ -52,6 +48,10 @@ hr{
 
   .resources{
     margin-bottom: 500px;
+    h3{
+      font-family: $headers-font;
+      color: $darkpurple;
+    }
     .resources-background{
       position: absolute;
       top: -480px;
@@ -70,19 +70,29 @@ hr{
       width: 280px;
       background-color: $white;
       position: absolute;
+      box-shadow: 0.5rem 0.5rem rgba(89, 82, 159, 0.35);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+
+      ul{
+        list-style-type: none;
+        padding: 0;
+      }
     }
     .resources-card1{
-      left: 120px;
+      left: 100px;
       top: -60px;
       border-radius: 10px;
     }
     .resources-card2{
-      left: 500px;
+      left: 480px;
       top: -190px;
       border-radius: 10px;
     }
     .resources-card3{
-      left: 880px;
+      left: 860px;
       top: -320px;
       border-radius: 10px;
     }
