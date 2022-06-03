@@ -16,4 +16,8 @@ class PagesController < ApplicationController
 
   def steptwo
   end
+
+  def dashboard
+
+  end
 end
