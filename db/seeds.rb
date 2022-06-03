@@ -47,8 +47,6 @@ jsres4 ={ name: "codecademy", difficulties: "intermediate", link:"" }
 jsres5 = { name: "codecademy", difficulties: "advanced", link:"" }
 jsres6 = { name: "codecademy", difficulties: "advanced", link:"" }
 
- = { name: "codecademy", difficulties: "beginner", link:"" }
-
 skill1 = Skill.create!(name: "Ruby", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "Ruby is a dynamic, general-purpose programming language most commonly used for Web Development. Its key designer, Yukihiro Matsumoto, said that Ruby was designed for humans, not machines, making it a favorite of many developers and tech companies. Its most popular implementation is with the powerful Ruby on Rails web framework.", resources: [rubyres1, rubyres2, rubyres3, rubyres4, rubyres5, rubyres6])
 skill2 = Skill.create!(name: "HTML", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "HTML is the set of markup symbols or codes inserted into a file intended for display on the Internet. The markup tells web browsers how to display a web page's words and images.", resources: [htmlres1, htmlres2, htmlres3, htmlres4])
 skill3 = Skill.create!(name: "CSS", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.", resources: [cssres1, cssres2, cssres3, cssres4, cssres5, cssres6])
