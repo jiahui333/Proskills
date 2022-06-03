@@ -18,7 +18,7 @@
   color: $lightpurple;
   border: 1px solid $lightblue;
   margin-right: 0.6rem;
-  margin-bottom: 0.4rem;
+  margin-bottom: 35px;
   margin-top: 20px;
 
 }
@@ -36,15 +36,17 @@
 
 .input1 {
   border: 1px solid $darkblue;
-  margin-top: 10px;
+  margin-top: -20px;
+  margin-bottom: 20px;
 }
 
 .input, .input2, .input3 {
-  margin-top: 10px;
+  margin-top: -20px;
 }
 
 .header-form {
 font-family: 'Noto Serif', serif;
+margin-bottom: 27px;
 }
 
 .developer {
@@ -109,4 +111,20 @@ font-family: 'Noto Serif', serif;
 
 .toggle:checked + label::after {
   left: 18px;
+}
+
+.others{
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+hr {
+  margin-bottom: 0px;
+  margin-top: 0px;
+}
+
+.checkboxes-skill {
+  .tag-selector + label {
+    margin-bottom: 10px;
+}
 }

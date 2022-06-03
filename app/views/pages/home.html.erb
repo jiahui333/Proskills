@@ -3,7 +3,11 @@
   <div class="home-left col-4">
     <h1>Proskills.</h1>
     <p>Would you like to learn programming skills or seek programming jobs that fit your skills?</p>
+    <% if current_user %>
+    <h3><%= link_to "Explore", skills_path, class:"button-primary"%></h3>
+    <% else %>
     <h3><%=link_to "Sign up", new_user_registration_path, class:"button-primary"%></h3>
+    <% end %>
   </div>
 
   <div class="home-right col-8">
