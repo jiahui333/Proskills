@@ -55,14 +55,14 @@
 
       &:hover {
         .quote-student{
-          animation-duration: 1s;
+          animation-duration: .8s;
           animation-name: changewidth2;
           animation-iteration-count: infinite;
           animation-direction: alternate;
         }
 
         img {
-          animation-duration: 1s;
+          animation-duration: .8s;
           animation-name: changewidth;
           animation-iteration-count: infinite;
           animation-direction: alternate;
@@ -70,12 +70,6 @@
       }
 
     }
-
-    // .jobseeker{
-    //   position: absolute;
-    //   left: 54%;
-    //   z-index: 1;
-    // }
 
     @keyframes changewidth3 {
       from {
@@ -106,14 +100,14 @@
 
       &:hover {
         .quote-jobseeker{
-          animation-duration: 1s;
+          animation-duration: .8s;
           animation-name: changewidth3;
           animation-iteration-count: infinite;
           animation-direction: alternate;
         }
 
         img {
-          animation-duration: 1s;
+          animation-duration: .8s;
           animation-name: changewidth4;
           animation-iteration-count: infinite;
           animation-direction: alternate;
