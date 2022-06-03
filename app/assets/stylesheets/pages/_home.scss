@@ -1,6 +1,6 @@
 // Specific CSS for your home-page
-main{
-  height: 90vh;
+.landing-page{
+  height: 660px;
   padding: 100px 150px 0;
 
   .home-left{
@@ -25,17 +25,101 @@ main{
       z-index: 1;
     }
 
-    .student{
+    @keyframes changewidth {
+      from {
+        transform: translateX(0px);
+      }
+
+      to {
+        transform: translateX(12px);
+      }
+    }
+
+    @keyframes changewidth2 {
+      from {
+        transform: translateX(0px);
+      }
+
+      to {
+        transform: translateX(-12px);
+      }
+    }
+
+    .student {
+
       position: absolute;
       top: 20%;
       left: 4%;
       z-index: 1;
+
+
+      &:hover {
+        .quote-student{
+          animation-duration: 1s;
+          animation-name: changewidth2;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+
+        img {
+          animation-duration: 1s;
+          animation-name: changewidth;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+      }
+
     }
 
-    .jobseeker{
+    // .jobseeker{
+    //   position: absolute;
+    //   left: 54%;
+    //   z-index: 1;
+    // }
+
+    @keyframes changewidth3 {
+      from {
+        transform: translateX(0px);
+      }
+
+      to {
+        transform: translateX(-12px);
+      }
+    }
+
+    @keyframes changewidth4 {
+      from {
+        transform: translateX(0px);
+      }
+
+      to {
+        transform: translateX(12px);
+      }
+    }
+
+    .jobseeker {
+
       position: absolute;
-      left: 54%;
+      left: 52%;
       z-index: 1;
+
+
+      &:hover {
+        .quote-jobseeker{
+          animation-duration: 1s;
+          animation-name: changewidth3;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+
+        img {
+          animation-duration: 1s;
+          animation-name: changewidth4;
+          animation-iteration-count: infinite;
+          animation-direction: alternate;
+        }
+      }
+
     }
 
     .quote{
@@ -53,8 +137,8 @@ main{
 
     .quote-jobseeker{
       position: absolute;
-      right: -50%;
-      top: -10%;
+      right: -52%;
+      top: -12%;
     }
 
     .quote-student{

@@ -1,3 +1,23 @@
-.btn signup {
+.btn {
+  color:  white;
+  margin-bottom: 15px;
+
+}
+
+.otherlinks {
   color: $white;
+  text-decoration: none;
+  margin: 0px;
+  font-size: smaller;
+}
+
+.otherlinks:hover {
+  color: $darkpurple;
+}
+
+.form-check-label {
+  color: white !important;
+  margin-top: 16px;
+  margin-bottom: 16px;
+  margin-left: 0px;
 }
