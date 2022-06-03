@@ -33,12 +33,21 @@ pythonres5 = { name: "Advanced Python Tutorial", difficulties: "advanced", link:
 pythonres6 = { name: "Advanced Python Full Course", difficulties: "advanced", link:"https://www.youtube.com/watch?v=Yrtm7d3TJbs" }
 
 phpres1 = { name: "codecademy", difficulties: "beginner", link:"" }
-phpres2 = { name: "codecademy", difficulties: "intermediate", link:"" }
-phpres2 = { name: "codecademy", difficulties: "advanced", link:"" }
+phpres2 = { name: "codecademy", difficulties: "beginner", link:"" }
+phpres3 = { name: "codecademy", difficulties: "intermediate", link:"" }
+phpres4 = { name: "codecademy", difficulties: "intermediate", link:"" }
+phpres5 = { name: "codecademy", difficulties: "advanced", link:"" }
+phpres6 = { name: "codecademy", difficulties: "advanced", link:"" }
+
 
 jsres1 = { name: "codecademy", difficulties: "begineer", link:"" }
-jsres2 ={ name: "codecademy", difficulties: "intermediate", link:"" }
-jsres3 = { name: "codecademy", difficulties: "advanced", link:"" }
+jsres2 = { name: "codecademy", difficulties: "begineer", link:"" }
+jsres3 ={ name: "codecademy", difficulties: "intermediate", link:"" }
+jsres4 ={ name: "codecademy", difficulties: "intermediate", link:"" }
+jsres5 = { name: "codecademy", difficulties: "advanced", link:"" }
+jsres6 = { name: "codecademy", difficulties: "advanced", link:"" }
+
+ = { name: "codecademy", difficulties: "beginner", link:"" }
 
 skill1 = Skill.create!(name: "Ruby", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "Ruby is a dynamic, general-purpose programming language most commonly used for Web Development. Its key designer, Yukihiro Matsumoto, said that Ruby was designed for humans, not machines, making it a favorite of many developers and tech companies. Its most popular implementation is with the powerful Ruby on Rails web framework.", resources: [rubyres1, rubyres2, rubyres3, rubyres4, rubyres5, rubyres6])
 skill2 = Skill.create!(name: "HTML", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "HTML is the set of markup symbols or codes inserted into a file intended for display on the Internet. The markup tells web browsers how to display a web page's words and images.", resources: [htmlres1, htmlres2, htmlres3, htmlres4])
