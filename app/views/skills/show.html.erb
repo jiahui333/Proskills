@@ -1,7 +1,7 @@
 <main class="show-page">
   <div class="skill-top row">
     <div class="language-card col-4">
-      <%= image_tag "skill_logos/#{@skill.name.downcase}.svg", class:"skill-logo" %>
+      <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo" %>
     </div>
 
     <div class="language-intro col-8">
@@ -23,22 +23,25 @@
       <div class="resources-cards resources-card1">
         <h3>Beginner</h3>
         <ul>
-          <li><%= link_to eval(@skill.resources[0])[:name], eval(@skill.resources[0])[:link] %></li>
-          <li><%= link_to eval(@skill.resources[1])[:name], eval(@skill.resources[1])[:link] %></li>
+          <% @beginner_resources.each do |br| %>
+            <li> <%= link_to br[:name], br[:link] %> </li>
+          <%end%>
         </ul>
       </div>
       <div class="resources-cards resources-card2">
         <h3>Intermediate</h3>
         <ul>
-          <li><%= link_to eval(@skill.resources[0])[:name], eval(@skill.resources[0])[:link] %></li>
-          <li><%= link_to eval(@skill.resources[1])[:name], eval(@skill.resources[1])[:link] %></li>
+          <% @intermediate_resources.each do |br| %>
+            <li> <%= link_to br[:name], br[:link] %> </li>
+          <%end%>
         </ul>
       </div>
       <div class="resources-cards resources-card3">
         <h3>Advanced</h3>
         <ul>
-          <li><%= link_to eval(@skill.resources[0])[:name], eval(@skill.resources[0])[:link] %></li>
-          <li><%= link_to eval(@skill.resources[1])[:name], eval(@skill.resources[1])[:link] %></li>
+          <% @advanced_resources.each do |br| %>
+            <li> <%= link_to br[:name], br[:link] %> </li>
+          <%end%>
         </ul>
       </div>
     </div>
