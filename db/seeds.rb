@@ -16,7 +16,9 @@ rubyres6 = { name: "Ruby Documentation", difficulties: "beginner", link:"https:/
 htmlres1 = { name: "What is HTML?", difficulties: "beginner", link:"https://html.com/" }
 htmlres2 = { name: "HTML for beginners", difficulties: "beginner", link:"https://www.youtube.com/watch?v=LGQuIIv2RVA&list=PL4-IK0AVhVjM0xE0K2uZRvsM7LkIhsPT-" }
 htmlres3 = { name: "Learn HTML with codecademy", difficulties: "intermediate", link:"https://www.codecademy.com/learn/learn-html" }
-htmlres4 = { name: "HTML Advanced Tutorial", difficulties: "advanced", link:"https://htmldog.com/guides/html/advanced/" }
+htmlres4 = { name: "Learn intermediate HTML", difficulties: "intermediate", link:"https://www.theodinproject.com/paths/full-stack-javascript/courses/intermediate-html-and-css" }
+htmlres5 = { name: "HTML Advanced Tutorial", difficulties: "advanced", link:"https://htmldog.com/guides/html/advanced/" }
+htmlres6 = { name: "HTML Advanced Tutorial", difficulties: "advanced", link:"https://learn.shayhowe.com/advanced-html-css/" }
 
 cssres1 =  { name: "CSS for absolute beginners", difficulties: "beginner", link:"https://www.youtube.com/watch?v=yfoY53QXEnI" }
 cssres2 = { name: "Learn CSS with Codecadamy", difficulties: "beginner", link:"https://www.codecademy.com/learn/learn-css" }
@@ -32,22 +34,46 @@ pythonres4 = { name: "Intermediate Python Tutorials", difficulties: "intermediat
 pythonres5 = { name: "Advanced Python Tutorial", difficulties: "advanced", link:"https://realpython.com/tutorials/advanced/" }
 pythonres6 = { name: "Advanced Python Full Course", difficulties: "advanced", link:"https://www.youtube.com/watch?v=Yrtm7d3TJbs" }
 
-phpres1 = { name: "codecademy", difficulties: "beginner", link:"" }
-phpres2 = { name: "codecademy", difficulties: "intermediate", link:"" }
-phpres2 = { name: "codecademy", difficulties: "advanced", link:"" }
+phpres1 = { name: "PHP Documentation", difficulties: "beginner", link:"https://www.php.net" }
+phpres2 = { name: "PHP fo beginners", difficulties: "beginner", link:"https://www.youtube.com/watch?v=6EukZDFE_Zg" }
+phpres3 = { name: "Learn PHP with Codecademy", difficulties: "intermediate", link:"https://www.codecademy.com/learn/learn-php" }
+phpres4 = { name: "PHP intermediate", difficulties: "intermediate", link:"https://www.youtube.com/watch?v=e9Vv9-RsamI&list=PLBEpR3pmwCazOsFp0xI3keBq7SoqDnxM7" }
+phpres5= { name: "PHP advanced", difficulties: "advanced", link:"https://www.youtube.com/watch?v=e9Vv9-RsamI&list=PLBEpR3pmwCazOsFp0xI3keBq7SoqDnxM7" }
+phpres6= { name: "PHP advanced", difficulties: "advanced", link:"https://www.w3resource.com/php-exercises/" }
 
-jsres1 = { name: "codecademy", difficulties: "begineer", link:"" }
-jsres2 ={ name: "codecademy", difficulties: "intermediate", link:"" }
-jsres3 = { name: "codecademy", difficulties: "advanced", link:"" }
 
-skill1 = Skill.create!(name: "Ruby", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "Ruby is a dynamic, general-purpose programming language most commonly used for Web Development. Its key designer, Yukihiro Matsumoto, said that Ruby was designed for humans, not machines, making it a favorite of many developers and tech companies. Its most popular implementation is with the powerful Ruby on Rails web framework.", resources: [rubyres1, rubyres2, rubyres3, rubyres4, rubyres5, rubyres6])
-skill2 = Skill.create!(name: "HTML", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "HTML is the set of markup symbols or codes inserted into a file intended for display on the Internet. The markup tells web browsers how to display a web page's words and images.", resources: [htmlres1, htmlres2, htmlres3, htmlres4])
-skill3 = Skill.create!(name: "CSS", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.", resources: [cssres1, cssres2, cssres3, cssres4, cssres5, cssres6])
-skill4 = Skill.create!(name: "Python", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming", resources: [jsres1, jsres2])
-skill5 = Skill.create!(name: "PHP", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "PHP is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.", resources: [phpres1, phpres2])
-skill6 = Skill.create!(name: "JavaScript", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions.", resources: [pythonres1, pythonres2, pythonres3, pythonres4, pythonres5, pythonres6])
-skill7 = Skill.create!(name: "C++", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "C++ is a general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or C with Classes. The language has expanded significantly over time, and modern C++ now has object-oriented, generic, and functional features in addition to facilities for low-level memory manipulation.", resources: [pythonres1, pythonres2])
-skill8 = Skill.create!(name: "SQL", difficulties: ["Beginner", "Intermediate", "Advanced"], description: "SQL is a standardized programming language that is used to manage relational databases and perform various operations on the data in them.", resources: [pythonres1, pythonres2])
+jsres1 = { name: "JavaScript for beginners", difficulties: "beginner", link:"https://www.youtube.com/watch?v=W6NZfCO5SIk" }
+jsres2 = { name: "Learn JavaScript with codecademy", difficulties: "beginner", link:"https://www.codecademy.com/learn/introduction-to-javascript" }
+jsres3 = { name: "Learn more JavaScript with codecademy", difficulties: "intermediate", link:"https://www.codecademy.com/learn/learn-intermediate-javascript" }
+jsres4 = { name: "Learn more JavaScript with codecademy", difficulties: "intermediate", link:"https://www.rithmschool.com/courses/intermediate-javascript" }
+jsres5 = {name: "Some ReactJS", difficulties: "intermediate", link:"https://www.codecademy.com/learn/react-101"}
+jsres6 = {name:"Advanced JavaScript", difficulties: "advanced", link:"https://www.youtube.com/watch?v=R9I85RhI7Cg"}
+jsres7 = {name:"Advanced JavaScript", difficulties: "advanced", link:"https://www.youtube.com/watch?v=R9I85RhI7Cg"}
+jsres8 = {name:"JavaScript Programming Tutorial", difficulties: "advanced", link:""}
+
+postgreSQLres1 = {name:"PostgreSQL for beginners", difficulties: "beginner", link:"https://www.postgresqltutorial.com/"}
+postgreSQLres2 = {name:"Beginner's Guide to PostgreSQL", difficulties: "beginner", link:"https://www.datacamp.com/tutorial/beginners-introduction-postgresql"}
+postgreSQLres3 = {name:"PostgreSQL Tutorial", difficulties: "intermediate", link:"https://www.youtube.com/watch?v=_vFiyFaQCPA"}
+postgreSQLres4 = {name:"PostgreSQL Documentation", difficulties: "intermediate", link:"https://www.postgresql.org/"}
+postgreSQLres5 = {name:"PostgreSQL Documentation Advanced", difficulties: "advanced", link:"https://www.postgresql.org/docs/9.0/tutorial-advanced.html"}
+postgreSQLres6 = {name:"Expert Level SQL Tutorial", difficulties: "advanced", link:"https://www.youtube.com/watch?v=C7CPXeEvKN0"}
+
+cres1 = {name:"Learn C++ with codecadamy", difficulties: "beginner", link:"https://www.codecademy.com/learn/learn-c-plus-plus"}
+cres2 = {name:"C++ for begiiners", difficulties: "beginner", link:"https://www.youtube.com/watch?v=vLnPwxZdW4Y"}
+cres3 = {name:"Beginner C++", difficulties: "beginner", link:"https://beginnersbook.com/2017/08/c-plus-plus-tutorial-for-beginners/"}
+cres4 = {name:"Intermediate C++", difficulties: "intermediate", link:"https://www.youtube.com/watch?v=iTL4iyFE_KI"}
+cres5 = {name:"Learn more C++ with codecadamy ", difficulties: "intermediate", link:"https://www.codecademy.com/learn/c-plus-plus-for-programmers"}
+cres6 = {name:"Advanced functions", difficulties: "advanced", link:"https://www.youtube.com/watch?v=TGOXttOoI0U"}
+cres7 = {name:"C++ Tutorial", difficulties: "advanced", link:"https://www.tutorialspoint.com/cplusplus/index.htm"}
+
+skill1 = Skill.create!(name: "Ruby", difficulties: ["beginner", "intermediate", "advanced"], description: "Ruby is a dynamic, general-purpose programming language most commonly used for Web Development. Its key designer, Yukihiro Matsumoto, said that Ruby was designed for humans, not machines, making it a favorite of many developers and tech companies. Its most popular implementation is with the powerful Ruby on Rails web framework.", resources: [rubyres1, rubyres2, rubyres3, rubyres4, rubyres5, rubyres6])
+skill2 = Skill.create!(name: "HTML", difficulties: ["beginner", "intermediate", "advanced"], description: "HTML is the set of markup symbols or codes inserted into a file intended for display on the Internet. The markup tells web browsers how to display a web page's words and images.", resources: [htmlres1, htmlres2, htmlres3, htmlres4])
+skill3 = Skill.create!(name: "CSS", difficulties: ["beginner", "intermediate", "advanced"], description: "CSS is a style sheet language used for describing the presentation of a document written in a markup language such as HTML. CSS is a cornerstone technology of the World Wide Web, alongside HTML and JavaScript.", resources: [cssres1, cssres2, cssres3, cssres4, cssres5, cssres6])
+skill4 = Skill.create!(name: "Python", difficulties: ["beginner", "intermediate", "advanced"], description: "Python is an easy to learn, powerful programming language. It has efficient high-level data structures and a simple but effective approach to object-oriented programming", resources: [jsres1, jsres2])
+skill5 = Skill.create!(name: "PHP", difficulties: ["beginner", "intermediate", "advanced"], description: "PHP is a widely-used open source general-purpose scripting language that is especially suited for web development and can be embedded into HTML.", resources: [phpres1, phpres2])
+skill6 = Skill.create!(name: "JavaScript", difficulties: ["beginner", "intermediate", "advanced"], description: "JavaScript is a high-level, often just-in-time compiled language that conforms to the ECMAScript standard. It has dynamic typing, prototype-based object-orientation, and first-class functions.", resources: [pythonres1, pythonres2, pythonres3, pythonres4, pythonres5, pythonres6])
+skill7 = Skill.create!(name: "C++", difficulties: ["beginner", "intermediate", "advanced"], description: "C++ is a general-purpose programming language created by Danish computer scientist Bjarne Stroustrup as an extension of the C programming language, or C with Classes. The language has expanded significantly over time, and modern C++ now has object-oriented, generic, and functional features in addition to facilities for low-level memory manipulation.", resources: [pythonres1, pythonres2])
+skill8 = Skill.create!(name: "SQL", difficulties: ["beginner", "intermediate", "advanced"], description: "SQL is a standardized programming language that is used to manage relational databases and perform various operations on the data in them.", resources: [pythonres1, pythonres2])
 
 user1 = User.create!(password: "111111", full_name: "Eric Stahl", username: "Ericstahl1", email: "eric@gmail.com")
 user2 = User.create!(password: "111111", full_name: "Carolina Stahl", username: "Carolinastahl1", email: "carolina@gmail.com")
