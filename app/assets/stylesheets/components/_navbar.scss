@@ -26,16 +26,3 @@
     color: $lightblue;
   }
 }
-
-#login-btn{
-  color: $darkpurple;
-  background-color: $white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 10px;
-  text-decoration: none;
-  margin-left: 1rem;
-
-  &:hover{
-    background-color: $lightblue;
-  }
-}

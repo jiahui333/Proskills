@@ -21,3 +21,22 @@
 .button-primary-small {
    padding: 8px 16px;
 }
+
+.button-sign-up{
+  color: $darkpurple;
+  background-color: $white;
+  border-radius: 10px;
+  text-decoration: none;
+  width: 6.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+
+  &:hover{
+    background-color: $lightblue;
+    color: $darkpurple;
+  }
+
+}

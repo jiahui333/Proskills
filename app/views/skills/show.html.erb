@@ -1,5 +1,7 @@
 <main class="show-page">
+
   <div class="skill-top row">
+
     <div class="language-card col-4">
       <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo" %>
     </div>
@@ -17,10 +19,19 @@
         <p>"Want to learn <%= @skill.name %>? We have learning resources for you!"</p>
       </div>
     </div>
+    <% if current_user == nil %>
+      <div class="see-resources-alert">
+        <p>Would like to see the learning resources?</p>
+        <%= link_to "Sign up", new_user_registration_path, class:"button-sign-up" %>
+        <p> or </p>
+        <%= link_to "Log in", new_user_session_path, class:"button-sign-up" %>
+      </div>
+    <% end %>
 
     <div class="resources">
       <%= image_tag "resources_background.png", class:"resources-background" %>
-      <div class="resources-cards resources-card1">
+
+      <div class=" <%= current_user ? "" : "blur" %> resources-cards resources-card1">
         <h3>Beginner</h3>
         <ul>
           <% @beginner_resources.each do |br| %>
@@ -28,7 +39,9 @@
           <%end%>
         </ul>
       </div>
-      <div class="resources-cards resources-card2">
+
+
+      <div class="<%= current_user ? "" : "blur" %> resources-cards resources-card2">
         <h3>Intermediate</h3>
         <ul>
           <% @intermediate_resources.each do |br| %>
@@ -36,7 +49,7 @@
           <%end%>
         </ul>
       </div>
-      <div class="resources-cards resources-card3">
+      <div class=" <%= current_user ? "" : "blur" %> resources-cards resources-card3">
         <h3>Advanced</h3>
         <ul>
           <% @advanced_resources.each do |br| %>
@@ -49,3 +62,16 @@
   </div>
 
 </main>
+
+
+<div class="editor"></div>
+<script>
+  let jar = CodeJar(document.querySelector('.editor'), Prism.highlightElement)
+  const highlight = (editor: HTMLElement) => {
+  const code = editor.textContent
+  // Do something with code and set html.
+  editor.innerHTML = code
+}
+
+let jar = CodeJar(editor, highlight)
+</script>

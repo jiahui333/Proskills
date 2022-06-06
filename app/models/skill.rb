@@ -1,3 +1,4 @@
 class Skill < ApplicationRecord
-  # serialize :resources, Array
+  has_many :job_skills
+  has_many :jobs, through: :job_skills
 end
