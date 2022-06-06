@@ -25,8 +25,8 @@
 
   .container .card {
     position: relative;
-    width: 160px;
-    height: 160px;
+    width: 200px;
+    height: 200px;
     margin: 15px;
     overflow: hidden;
     // &:hover {
@@ -168,9 +168,52 @@
   display: flex;
   align-items: center;
   justify-items: center;
-  padding-left: 15px;
+  padding-left: 30px;
 }
 
+.filter_front {
+  border-radius: 25px;
+  padding: 10px 30px;
+  // box-shadow: 9px 8px 0px black;
+  background-color: $lightpurple;
+  text-decoration: none;
+  color: $white;
+  border: $lightpurple;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  display: inline-block;
+  align-items: center;
+  justify-content: center;
+
+  &:hover {
+    color: #DDFFF7;
+    // // background-color: $darkpurple;
+    // box-shadow: 9px 8px 0px $darkpurple;
+    // transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+
+.filter_back {
+  border-radius: 25px;
+  padding: 10px 30px;
+  // box-shadow: 9px 8px 0px black;
+  background-color: $lightpurple;
+  text-decoration: none;
+  color: $white;
+  border: $lightpurple;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  display: inline-block;
+  justify-content: center;
+
+  &:hover {
+    color: #DDFFF7;
+    // // background-color: $darkpurple;
+    // box-shadow: 9px 8px 0px $darkpurple;
+    // transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
 
 
 
