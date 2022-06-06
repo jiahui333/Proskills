@@ -1,42 +1,46 @@
 <div class="container steptwo ">
   <div class="form form-2">
     <h2 class="header-form">Give us some more Information</h2>
-    <form>
+    <%= simple_form_for @user, url: edit_user_path, :method => :patch %>
 
     <hr>
 
       <label class="input" ><h4>What programming skills do you have?</h4></label>
       <div class="checkboxes-skill row w-75 m-auto" >
         <div class="tag-item col-4">
-          <input class="my-checkbox tag-selector" type="checkbox" id="Ruby">
-          <label style="width: 100%" for="Ruby"> Ruby</label>
+          <input class="my-checkbox tag-selector" type="checkbox" id="Ruby" name="Ruby>
+          <label style="width: 100% for="Ruby">Ruby</label>
         </div>
+
         <div class="tag-item col-4">
-          <input class="tag-selector" type="checkbox" id="HTML">
-          <label style="width: 100%" for="HTML"> HTML</label>
+          <input class="tag-selector" type="checkbox" id="HTML" name="HTML">
+          <label style="width: 100%" for="HTML">HTML</label>
         </div>
+
         <div class="tag_item col-4">
-          <input class="tag-selector" type="checkbox" id="CSS">
-          <label style="width: 100%" for="CSS"> CSS</label>
+          <input class="tag-selector" type="checkbox" id="CSS" name="CSS">
+          <label style="width: 100%" for="CSS">CSS</label>
         </div>
+
         <div class="tag_item col-4">
-          <input class="tag-selector" type="checkbox" id="JavaScript">
-          <label style="width: 100%" for="JavaScript"> JavaScript</label>
+          <input class="tag-selector" type="checkbox" id="JavaScript" name="JavaScript">
+          <label style="width: 100%" for="JavaScript">JavaScript</label>
         </div>
+
         <div class="tag-item col-4">
-          <input class="tag-selector" type="checkbox" id="Python">
+          <input class="tag-selector" type="checkbox" id="Python" name="Python">
           <label style="width: 100%" for="Python">Python</label>
         </div>
 
         <div class="tag-item col-4">
-          <input class="tag-selector" type="checkbox" id="Rails">
+          <input class="tag-selector" type="checkbox" id="Rails" name="Rails">
           <label style="width: 100%" for="Rails">Rails</label>
         </div>
       </div>
 
       <div class="others">
         <label>Others?</label>
-        <input type="input" class="input1">
+        <input type="input" class="input1" name="query">
       </div>
 
         <hr>
@@ -47,17 +51,17 @@
 
       <div class="checkbox-job row w-75 m-auto">
         <div class="tag-item col-4">
-          <input class="tag-selector" type="checkbox" id="Front-end">
+          <input class="tag-selector" type="checkbox" id="Front-end" name="Front-end">
           <label style="width: 100%;" for="Front-end">Front-End</label>
         </div>
 
         <div clas="tag-item col-4" style="width: auto;">
-          <input class="tag-selector" type="checkbox" id="Back-End">
+          <input class="tag-selector" type="checkbox" id="Back-End" name="Back-End">
           <label style="width: 100%;" for="Back-End">Back-End</label>
         </div>
 
         <div class="tag-item col-4">
-          <input class="tag-selector" type="checkbox" id="Full-Stack">
+          <input class="tag-selector" type="checkbox" id="Full-Stack" name="Full-Stack">
           <label style="width: 100%; " for="Full-Stack">Full-Stack</label>
         </div>
       </div>
@@ -76,9 +80,10 @@
         <%# <input type="checkbox" class="toggle">
         <label for="developer">Yes</label> %>
       </div>
+      <input type="hidden" id="form_completed" name="form_completed" value="true">
 
       <input type="submit" name="Submit" class="button-primary mt-4 mb-0" value="Submit">
 
-    </form>
+    <% end %>
   </div>
 </div>
