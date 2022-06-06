@@ -5,120 +5,25 @@
 </div>
 <div class="container">
   <div class="row">
-    <%= link_to skill_path(id: Skill.find_by(name: "CSS")), class: "skills-cards-link col-3" do %>
-      <div class="card">
-        <div class="imgbx">
-          <div class="mytext" style="height: 100%; width: 100%; background-color: #3483EB; color: white; display: flex; col-3 align-items: center; justify-content: center;">
-            <%= image_tag "skill_logos/css.svg" %>
+    <% @skills.each do |skill| %>
+      <%= link_to skill_path(id: skill.id), class: "skills-cards-link col-3" do %>
+        <div class="card">
+          <div class="imgbx">
+            <div class="mytext" style="height: 100%; width: 100%; background-color: <%= skill.color %>; color: white; display: flex; align-items: center; justify-content: center;">
+              <% if skill.name == "C++" %>
+                <%= image_tag "skill_logos/c.svg" %>
+              <% else %>
+                <%= image_tag "skill_logos/#{skill.name.downcase}.svg" %>
+              <% end %>
+            </div>
+          </div>
+          <div class="contentbx">
+            <div class="content">
+              <p><%= skill.name %>!</p>
+            </div>
           </div>
         </div>
-        <div class="contentbx">
-          <div class="content">
-            <p>CSS!</p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-
-    <%= link_to skill_path(id: Skill.find_by(name: "HTML")), class: "skill-cards-link col-3" do %>
-      <div class="card">
-        <div class="imgbx">
-          <div class="mytext" style="height: 100%; width: 100%; background-color: #EB8934; color: white; display: flex; col-3 align-items: center; justify-content: center;">
-            <%= image_tag "skill_logos/html.svg" %>
-          </div>
-        </div>
-        <div class="contentbx">
-          <div class="content">
-            <p>HTML!</p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-    <%= link_to skill_path(id: Skill.find_by(name: "JavaScript")), class: "skill-cards-link col-3" do %>
-      <div class="card">
-        <div class="imgbx">
-          <div class="mytext" style="height: 100%; width: 100%; background-color: #EBD934; color: white; display: flex; col-3 align-items: center; justify-content: center;">
-            <%= image_tag "skill_logos/javascript.svg" %>
-          </div>
-        </div>
-        <div class="contentbx">
-          <div class="content">
-            <p>JavaScript!</p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-    <%= link_to skill_path(id: Skill.find_by(name: "Python")), class: "skill-cards-link col-3" do %>
-      <div class="card">
-        <div class="imgbx">
-          <div class="mytext" style="height: 100%; width: 100%;  background: #DDFFF7; color: white; display: flex; col-3 align-items: center; justify-content: center;">
-            <%= image_tag "skill_logos/python.svg" %>
-          </div>
-        </div>
-        <div class="contentbx">
-          <div class="content">
-            <p>Python!</p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-  </div>
-  <div class="row">
-    <%= link_to skill_path(id: Skill.find_by(name: "PHP")), class: "skill-cards-link col-3" do %>
-      <div class="card">
-        <div class="imgbx">
-          <div class="mytext" style="height: 100%; width: 100%; background-color: #858EBA; color: white; display: flex; col-3 align-items: center; justify-content: center;">
-            <%= image_tag "skill_logos/php.svg" %>
-          </div>
-        </div>
-        <div class="contentbx">
-          <div class="content">
-            <p>PHP!</p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-    <%= link_to skill_path(id: Skill.find_by(name: "Ruby")), class: "skill-cards-link col-3" do %>
-      <div class="card">
-        <div class="imgbx">
-          <div class="mytext" style="height: 100%; width: 100%; background-color: #9B2015; color: white; display: flex; col-3 align-items: center; justify-content: center;">
-            <%= image_tag "skill_logos/ruby.svg" %>
-          </div>
-        </div>
-        <div class="contentbx">
-          <div class="content">
-            <p>Ruby!</p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-    <%= link_to skill_path(id: Skill.find_by(name: "C++")), class: "skill-cards-link col-3" do %>
-      <div class="card">
-        <div class="imgbx">
-          <div class="mytext" style="height: 100%; width: 100%;  background: #DDFFF7; color: white; display: flex; col-3 align-items: center; justify-content: center;">
-            <%= image_tag "skill_logos/c.svg" %>
-          </div>
-        </div>
-        <div class="contentbx">
-          <div class="content">
-            <p>C++!</p>
-          </div>
-        </div>
-      </div>
-    <% end %>
-    <%= link_to skill_path(id: Skill.find_by(name: "SQL")), class: "skill-cards-link col-3" do %>
-      <div class="card">
-        <div class="imgbx">
-          <div class="mytext" style="height: 100%; width: 100%;  background: lightgrey; color: white; display: flex; col-3 align-items: center; justify-content: center;">
-            <%= image_tag "skill_logos/sql.svg" %>
-          </div>
-        </div>
-        <div class="contentbx">
-          <div class="content">
-            <p>SQL!</p>
-          </div>
-        </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
