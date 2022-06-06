@@ -14,3 +14,7 @@ ActiveStorage.start()
 
 import "controllers"
 import "bootstrap"
+
+import {modal} from "pages/index_job"
+
+modal()

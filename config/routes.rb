@@ -7,8 +7,10 @@ Rails.application.routes.draw do
   get "/stepone", to: "pages#stepone"
   get "/steptwo", to: "pages#steptwo", as: :steptwo
   get "dashboard", to: "pages#dashboard"
-  get "skills/:id", to: "skills#show"
-  get "jobs", to: "jobs#index"
+  # get "skills/:id", to: "skills#show"
+  resources :skills, only: [:index, :show]
+  resources :jobs, only: [:index, :show]
+
   patch "/user_edit", to: "pages#user_update"
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
 

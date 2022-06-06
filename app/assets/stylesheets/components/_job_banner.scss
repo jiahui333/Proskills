@@ -1,8 +1,8 @@
 .job-banner{
-  padding-top: 100px;
+  padding-top: 60px;
   background-color: $lightblue;
   color: $lightpurple;
-  height: 300px;
+  height: 200px;
 
   .banner-text{
     width: 50%;
@@ -22,7 +22,7 @@
     }
 
     .fa-js{
-      top: -30%;
+      top: -5%;
       left: 0;
     }
 
@@ -33,20 +33,21 @@
 
     .fa-python{
       left: 10%;
-      bottom: -50%;
+      bottom: -26%;
     }
 
     .fa-php{
-      right: 10%;
+      right: 12%;
+      bottom: 10%;
     }
 
     .fa-java{
-      bottom: -65%;
+      bottom: -50%;
       left: 35%;
     }
 
     .fa-r-project{
-      bottom: -75%;
+      bottom: -50%;
       right: 35%;
     }
 
