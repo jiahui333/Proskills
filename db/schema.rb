@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_03_102812) do
+ActiveRecord::Schema.define(version: 2022_06_06_131013) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2022_06_03_102812) do
     t.string "resources", default: [], array: true
     t.boolean "backend", default: true
     t.boolean "frontend", default: true
+    t.string "color"
   end
 
   create_table "user_jobs", force: :cascade do |t|
