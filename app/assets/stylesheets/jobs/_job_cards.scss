@@ -1,7 +1,17 @@
 .job-cards{
-  padding: 8rem;
+  padding: 6rem 8rem;
 }
 
+.button-primary{
+  &:hover{
+    box-shadow: 4px 5px 0px $darkpurple;
+  }
+}
+
+a{
+  text-decoration: none;
+  color: inherit;
+}
 
 
 .job-card{
@@ -15,7 +25,6 @@
   flex-direction: column;
   justify-content: space-around;
   padding: 20px;
-  color: $darkpurple;
 
   transition: 0.1s;
   backface-visibility: hidden;
@@ -36,8 +45,19 @@
     opacity: .8;
   }
 
+  .job-description{
+    display: none;
+  }
+
+  .job-top{
+    height: 100px;
+  }
+  .job-bottom{
+    height: 1rem;
+  }
+
   &:hover{
-    box-shadow: 0.5rem 0.5rem $lightpurple;
+    box-shadow: 0.5rem 0.5rem rgba(89, 82, 159, 0.35);
     transform: scale3d(1.02, 1.02, 1.02);
   }
 }

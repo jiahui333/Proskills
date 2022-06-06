@@ -1,31 +1,40 @@
 <%#= render 'job_banner' %>
+<div class="job-modal" style="display: none;">
+  <div class="modal-text"></div>
+</div>
 <div class="job-cards">
 
-<%= form_tag jobs_path, method: :get do %>
-  <%= text_field_tag :query,
-    params[:query],
-    class: "form-control",
-    placeholder: "Type your programming skill"
-  %>
-  <%= submit_tag "Search", class: "button-primary" %>
-<% end %>
+  <div class="job-searchbar">
+    <%= form_tag jobs_path, method: :get do %>
+      <%= text_field_tag :query,
+        params[:query],
+        class: "form-control job-search-fill",
+        placeholder: "Type your programming skill"
+      %>
+      <%= submit_tag "Search", class: "button-primary" %>
+    <% end %>
+  </div>
 
   <div class="row">
-  <% @jobs.each do |job| %>
-    <div class="col-lg-3 mb-5">
-      <div class="job-card">
-        <div class="job-top">
-          <h3> <%= job.title %> </h3>
-          <i class="fa-regular fa-building d-line mt-3"></i><p> <%= job.company %></p>
-        </div>
-        <hr>
-        <div class="job-bottom">
-          <% job.skills.each do |skill| %>
-            <%= skill.name %>
-          <% end %>
-        </div>
+    <% @jobs.each do |job| %>
+      <div class="col-lg-3 mb-5">
+        <%#= link_to job_path(id: Job.find_by(params[:id])) do %>
+          <div class="job-card">
+            <p class="job-description"><%= job.description %></p>
+            <div class="job-top">
+              <h3> <%= job.title %> </h3>
+              <i class="fa-regular fa-building d-line mt-3"></i>
+              <p> <%= job.company %></p>
+            </div>
+            <hr>
+            <div class="job-bottom">
+              <% job.skills.each do |skill| %>
+                <%= skill.name %>
+              <% end %>
+            </div>
+          </div>
+        <%# end %>
       </div>
-    </div>
-  <% end %>
+    <% end %>
   </div>
 </div>
