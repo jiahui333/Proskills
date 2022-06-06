@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(version: 2022_06_06_141157) do
     t.string "resources", default: [], array: true
     t.boolean "backend", default: true
     t.boolean "frontend", default: true
+    t.string "color"
   end
 
   create_table "user_jobs", force: :cascade do |t|
