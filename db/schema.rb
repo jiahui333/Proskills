@@ -41,6 +41,7 @@ ActiveRecord::Schema.define(version: 2022_06_02_125139) do
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.string "resources", default: [], array: true
+
   end
 
   create_table "user_jobs", force: :cascade do |t|

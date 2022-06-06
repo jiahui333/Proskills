@@ -1,4 +1,8 @@
 <%= render "components/skill_banner" %>
+<div class="text-center">
+<%= link_to "Front end", skills_path(query: "frontend"), class: "filter_front"%>
+<%= link_to "Back end", skills_path(query: "backend"), class: "filter_back button" %>
+</div>
 <div class="container">
   <div class="row">
     <%= link_to skill_path(id: Skill.find_by(name: "CSS")), class: "skills-cards-link col-3" do %>
