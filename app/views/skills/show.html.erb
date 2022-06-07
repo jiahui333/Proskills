@@ -2,14 +2,22 @@
 
   <div class="skill-top row">
 
-    <div class="language-card col-6">
-      <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@Joy333/<%= @skill.name.downcase %>?lite=true"></iframe>
+    <div class="language-card col-6 pe-5">
+      <div class="language-title">
+        <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo" %>
+        <h1> <%= @skill.name %> </h1>
+      </div>
+      <p><%= @skill.description %></p>
+      <p class="why-like-title">Why do we like it?</p>
+      <ul>
+        <% @skill.bulletpoints.each do |point| %>
+          <li> <%=point %> </li>
+        <% end %>
+      </ul>
     </div>
 
-    <div class="language-intro col-6">
-      <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo" %>
-      <h1> <%= @skill.name %> </h1>
-      <p><%= @skill.description %></p>
+    <div class="language-complier col-6">
+      <iframe frameborder="0" width="100%" height="500px" src="https://replit.com/@Joy333/<%= @skill.name == "C++" ? "c" : @skill.name.downcase %>?lite=true"></iframe>
     </div>
   </div>
 

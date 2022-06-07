@@ -8,8 +8,20 @@
   p{
     margin-top: 1rem;
   }
-  .skill-logo{
-  height: 120px;
+
+  .language-title {
+    display: flex;
+    gap: 1.2rem;
+
+    .skill-logo{
+    height: 36px;
+    }
+
+  }
+
+  .why-like-title{
+    font-weight: bold;
+    margin-top: 3rem;
   }
 }
 
