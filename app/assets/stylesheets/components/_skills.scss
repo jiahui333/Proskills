@@ -26,9 +26,10 @@
     height: 200px;
     margin: 15px;
     overflow: hidden;
-    // &:hover {
-      // background-color: red;
-    // }
+   &:hover {
+    transform: scale3d(1.05, 1.05, 1.05);
+    box-shadow: 0.5rem 0.5rem rgba(28, 25, 75, 0.625);
+  }
   }
 
   .container .card .imgbx
@@ -82,6 +83,7 @@
   transform-origin: left;
   transition-delay:2s;
   transition-duration: 3s;
+
   }
 
   .container .card:hover .contentbx .contentbx::before
@@ -163,9 +165,17 @@
   }
 .content {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  align-content: center;
   justify-items: center;
-  padding-left: 30px;
+  align-items: center;
+  height: auto;
+
+  p {
+    margin-top: 42%;
+    height: fit-content;
+  }
+  // text-align: center;
 }
 
 .filter_front {
@@ -181,9 +191,12 @@
   display: inline-block;
   align-items: center;
   justify-content: center;
+  margin-right: 20px;
 
   &:hover {
     color: #DDFFF7;
+    box-shadow: 9px 8px 0px $darkpurple;
+    transform: scale3d(1.05, 1.05, 1.05)
     // // background-color: $darkpurple;
     // box-shadow: 9px 8px 0px $darkpurple;
     // transform: scale3d(1.05, 1.05, 1.05);
@@ -203,15 +216,39 @@
   align-items: center;
   display: inline-block;
   justify-content: center;
+  margin-right: 20px;
 
   &:hover {
     color: #DDFFF7;
-    // // background-color: $darkpurple;
-    // box-shadow: 9px 8px 0px $darkpurple;
+    box-shadow: 9px 8px 0px $darkpurple;
+    transform: scale3d(1.05, 1.05, 1.05) // // background-color: $darkpurple;
+      // box-shadow: 9px 8px 0px $darkpurple;
     // transform: scale3d(1.05, 1.05, 1.05);
   }
 }
 
+.filter_all {
+  border-radius: 25px;
+  padding: 10px 30px;
+  // box-shadow: 9px 8px 0px black;
+  background-color: $lightpurple;
+  text-decoration: none;
+  color: $white;
+  border: $lightpurple;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  align-items: center;
+  display: inline-block;
+  justify-content: center;
+
+  &:hover {
+    color: #DDFFF7;
+    box-shadow: 9px 8px 0px $darkpurple;
+    transform: scale3d(1.05, 1.05, 1.05) // // background-color: $darkpurple;
+      // box-shadow: 9px 8px 0px $darkpurple;
+    // transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
 
 
 

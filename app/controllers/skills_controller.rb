@@ -29,6 +29,10 @@ class SkillsController < ApplicationController
         @skills = Skill.where(backend: true)
       end
 
+      if params[:query] == "all"
+        @skills = Skill.all
+      end
+
     end
   end
 end
