@@ -6,9 +6,16 @@ Rails.application.routes.draw do
   get "/skills", to: "skills#index"
   get "/steptwo", to: "pages#steptwo", as: :steptwo
   get "dashboard", to: "pages#dashboard"
+
+  # get "skills/:id", to: "skills#show"
+  resources :skills, only: [:index, :show] do
+    resources :favorites, only: [:create]
+  end
+
   get "dashboard/skills", to: "pages#dashboardmyskills"
   get "dashboard/jobs", to: "pages#dashboardmyjobs"
   resources :skills, only: [:index, :show]
+
   resources :jobs, only: [:index, :show]
   get "/user_edit", to: "pages#user_update"
 
