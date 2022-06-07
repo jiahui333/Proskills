@@ -10,10 +10,19 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_07_092252) do
+ActiveRecord::Schema.define(version: 2022_06_07_142928) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "favorites", force: :cascade do |t|
+    t.bigint "skill_id", null: false
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["skill_id"], name: "index_favorites_on_skill_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
+  end
 
   create_table "job_skills", force: :cascade do |t|
     t.bigint "skill_id", null: false
@@ -84,6 +93,8 @@ ActiveRecord::Schema.define(version: 2022_06_07_092252) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
+  add_foreign_key "favorites", "skills"
+  add_foreign_key "favorites", "users"
   add_foreign_key "job_skills", "jobs"
   add_foreign_key "job_skills", "skills"
   add_foreign_key "user_jobs", "jobs"
