@@ -1,4 +1,45 @@
-.modal-wrapper{
+.job-modal {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 3;
+}
+
+.close-button{
+  background: none;
+  color: $white;
+  border: none;
+  position: absolute;
+  right: 30px;
+  top: 15px;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 20px;
+}
+
+.modal-card{
   background-color: $lightpurple;
   color: $white;
+  padding: 60px;
+  margin: 10% auto;
+  width: 45vw;
+  height: fit-content;
+  z-index: 2;
+  border-radius: 10px;
+  position: relative;
+
+  hr{
+    margin-bottom: 20px;
+  }
+  p{
+    margin-bottom: 2rem;
+  }
 }
+
+
+// .stop-scrolling {
+//   height: 100%;
+//   overflow: hidden;
+// }

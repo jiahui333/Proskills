@@ -1,7 +1,14 @@
 <%#= render 'job_banner' %>
 <div class="job-modal" style="display: none;">
-  <div class="modal-text"></div>
 </div>
+
+<div class="apply-modal">
+</div>
+
+<% if user_signed_in? %>
+  <div class="signed-in"></div>
+<% end %>
+
 <div class="job-cards">
 
   <div class="job-searchbar">
