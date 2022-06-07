@@ -1,10 +1,6 @@
 class PagesController < ApplicationController
   def home
-    if current_user
-      if !current_user.student && !current_user.form_completed
-        redirect_to steptwo_path
-      end
-    end
+
   end
 
   def components
@@ -14,9 +10,6 @@ class PagesController < ApplicationController
   end
 
   def index
-  end
-
-  def stepone
   end
 
   def steptwo
@@ -30,16 +23,29 @@ class PagesController < ApplicationController
 
   def user_update
     @user = current_user
-    @user.update(skills: params[:skills],
-      interests: params[:interests],
-      developer: params[:developer] == "true",
+    interests = ["Front-End", "Back-End", "Full-Stack"]
+    skills = ["Ruby", "HTML", "CSS", "JavaScript", "Python", "Rails"]
+    developer = params["snippet"]["archived"] == "1"
+    skills = skills.select { |skill| params.key?(skill) }
+    interests = interests.select { |interest| params.key?(interest) }
+    skills << params[:query] unless params[:query] == ""
+    @user.update!(skills: skills,
+      interests: interests,
+      developer: developer,
       form_completed: params[:form_completed] == "true")
-      redirect_to root_path
+      redirect_to jobs_path
   end
 
   private
 
   def user_params
     params.require(:user).permit(:full_name, :username, :student, :skills, :interests, :developer, :form_completed)
+  end
+
+  def dashboardmyskills
+    @user_skills = []
+  end
+
+  def dashboardmyjobs
   end
 end

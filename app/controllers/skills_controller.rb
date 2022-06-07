@@ -13,6 +13,12 @@ class SkillsController < ApplicationController
   end
 
   def index
+    if current_user
+      if !current_user.student && !current_user.form_completed
+        redirect_to steptwo_path
+      end
+    end
+
     @skills = Skill.all
     if params[:query].present?
       if params[:query] == "frontend"
