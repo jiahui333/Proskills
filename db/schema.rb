@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_07_092252) do
+ActiveRecord::Schema.define(version: 2022_06_07_185433) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -45,6 +45,7 @@ ActiveRecord::Schema.define(version: 2022_06_07_092252) do
     t.boolean "frontend", default: true
     t.string "color"
     t.string "all"
+    t.string "bulletpoints", default: [], array: true
   end
 
   create_table "user_jobs", force: :cascade do |t|
