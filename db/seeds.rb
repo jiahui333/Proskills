@@ -1,14 +1,13 @@
 # This file should contain all the record creation needed to seed the database with its default values.
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
-# Examples:
+
 User.destroy_all
 JobSkill.destroy_all
 Skill.destroy_all
 Job.destroy_all
 
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+
 rubyres1 = { name: "Ruby in Twenty Minutes", difficulties: "beginner", link:"https://www.ruby-lang.org/en/documentation/quickstart/" }
 rubyres2 = { name: "Ruby from Scratch", difficulties: "beginner", link:"https://www.youtube.com/watch?v=c7FExaJY9A4&list=PLjQo0sojbbxUDMdYqxzzFYLVgqT2wDQXO" }
 rubyres3 = { name: "Ruby from Scratch2", difficulties: "intermediate", link:"https://www.youtube.com/watch?v=c7FExaJY9A4&list=PLjQo0sojbbxUDMdYqxzzFYLVgqT2wDQXO" }
