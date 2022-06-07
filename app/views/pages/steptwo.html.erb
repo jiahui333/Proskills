@@ -1,7 +1,7 @@
 <div class="container steptwo ">
   <div class="form form-2">
     <h2 class="header-form">Give us some more Information</h2>
-    <%= simple_form_for @user, url: edit_user_path, :method => :patch %>
+    <form action="/user_edit">
 
     <hr>
 
@@ -51,7 +51,7 @@
 
       <div class="checkbox-job row w-75 m-auto">
         <div class="tag-item col-4">
-          <input class="tag-selector" type="checkbox" id="Front-end" name="Front-end">
+          <input class="tag-selector" type="checkbox" id="Front-End" name="Front-End">
           <label style="width: 100%;" for="Front-end">Front-End</label>
         </div>
 
@@ -84,6 +84,6 @@
 
       <input type="submit" name="Submit" class="button-primary mt-4 mb-0" value="Submit">
 
-    <% end %>
+    </form>
   </div>
 </div>

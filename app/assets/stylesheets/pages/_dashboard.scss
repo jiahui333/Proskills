@@ -10,22 +10,45 @@
   .dashboard{
     height: 580px;
     width: 1000px;
-    margin: 40px auto;
     background-color: $darkblue;
     border-radius: 40% 60% 36% 64% / 47% 46% 54% 53%;
+    margin-left: 400px;
 
     .dash-left{
+      display: flex;
+      flex-direction: column;
+      gap: 10%;
       padding-top: 210px;
       padding-left: 100px;
       color:$white;
     }
 
-    .dash-card{
-      height: 140px;
-      width: 140px;
-      background-color: $white;
+    .dash-right{
+    display: flex;
+      .dash-card{
+        height: 140px;
+        width: 140px;
+        margin: 10px;
+        background-color: $white;
+        box-shadow: 0.5rem 0.5rem rgba(89, 82, 159, 0.35);
+        background-blend-mode: darken;
+      }
+
+      .dash-card:hover {
+        box-shadow: 0.5rem 0.5rem rgba(89, 82, 159, 0.75)  ;
+      }
+
     }
   }
 
 
+}
+
+.Item{
+  text-align: center;
+}
+
+.welcome {
+  margin-top: 50px;
+  margin-left: 150px;
 }

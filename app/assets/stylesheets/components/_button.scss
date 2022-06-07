@@ -20,6 +20,7 @@
 
 .button-primary-small {
    padding: 8px 16px;
+   text-align: center;
 }
 
 .button-sign-up{
@@ -28,6 +29,24 @@
   border-radius: 10px;
   text-decoration: none;
   width: 6.5rem;
+  height: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+
+  &:hover{
+    background-color: $lightblue;
+    color: $darkpurple;
+  }
+
+}
+
+.button-apply{
+  color: $darkpurple;
+  background-color: $white;
+  border-radius: 10px;
+  text-decoration: none;
   height: 2.5rem;
   display: flex;
   justify-content: center;

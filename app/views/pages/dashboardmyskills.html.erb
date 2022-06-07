@@ -1,0 +1,35 @@
+<main class="dashboard-page">
+  <h1 class="welcome">Hey <%= current_user.username %></h1>
+  <div>
+
+  </div>
+  <div class="dashboard row">
+    <div class="dash-left col-4">
+      <%= link_to "My skills", dashboard_skills_path, class:"button-primary button-primary-small"%>
+      <%= link_to "My jobs", dashboard_jobs_path, class:"button-primary button-primary-small"%>
+    </div>
+    <div class="dash-right col-8" style="padding-top: 110px;">
+      <div>
+        <div class="dash-card">
+          <%= image_tag "skill_logos/html.svg"%>
+        </div>
+
+        <div class="dash-card">
+          <%= image_tag "skill_logos/ruby.svg" %>
+        </div>
+
+      </div>
+
+      <div>
+        <div class="dash-card ">
+          <%= image_tag "skill_logos/javascript.svg" %>
+        </div>
+
+        <div class="dash-card ">
+          <%= image_tag "skill_logos/sql.svg" %>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</main>
