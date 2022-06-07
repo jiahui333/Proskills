@@ -8,7 +8,9 @@ Rails.application.routes.draw do
   get "/steptwo", to: "pages#steptwo", as: :steptwo
   get "dashboard", to: "pages#dashboard"
   # get "skills/:id", to: "skills#show"
-  resources :skills, only: [:index, :show]
+  resources :skills, only: [:index, :show] do
+    resources :favorites, only: [:create]
+  end
   resources :jobs, only: [:index, :show]
 
   patch "/user_edit", to: "pages#user_update"
