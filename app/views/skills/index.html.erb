@@ -21,10 +21,6 @@
           <div class="contentbx">
             <div class="content">
               <p><%= skill.name %>!</p>
-                <div <% if !Favorite.find_by(user_id: current_user.id, skill_id: skill.id) %>>
-                <%= link_to "like", skill_favorites_path(skill.id), method: :post %>
-                <% end %>
-                </div>
             </div>
           </div>
         </div>

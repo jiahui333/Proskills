@@ -39,11 +39,11 @@ class PagesController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:full_name, :username, :student, :skills, :interests, :developer, :form_completed)
+    params.require(:user).permit(:full_name, :username, :student, :skills, :developer, :form_completed, interests: [])
   end
 
   def dashboardmyskills
-    @user_skills = []
+
   end
 
   def dashboardmyjobs

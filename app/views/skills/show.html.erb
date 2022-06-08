@@ -6,8 +6,20 @@
       <div class="language-title">
         <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo" %>
         <h1> <%= @skill.name %> </h1>
+
+        <% if !Favorite.find_by(user_id: current_user.id, skill_id: @skill.id) %>
+          <%= link_to skill_favorites_path(@skill.id), method: :post do %>
+            <i class="fa-regular fa-heart fa-xl"></i>
+          <% end %>
+        <% else %>
+          <%= link_to favorite_path(Favorite.find_by(user_id: current_user.id, skill_id: @skill.id)), method: :delete do %>
+            <i class="fa-solid fa-heart fa-xl"></i>
+          <% end %>
+        <% end %>
       </div>
+
       <p><%= @skill.description %></p>
+
       <p class="why-like-title">Why do we like it?</p>
       <ul>
         <% @skill.bulletpoints.each do |point| %>

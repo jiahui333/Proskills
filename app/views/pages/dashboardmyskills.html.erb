@@ -1,35 +1,46 @@
 <main class="dashboard-page">
-  <h1 class="welcome">Hey <%= current_user.username %></h1>
-  <div>
-
+  <%= render "dashboard_banner" %>
   </div>
-  <div class="dashboard row">
-    <div class="dash-left col-4">
-      <%= link_to "My skills", dashboard_skills_path, class:"button-primary button-primary-small"%>
-      <%= link_to "My jobs", dashboard_jobs_path, class:"button-primary button-primary-small"%>
+  <div class="container dash-wrapper">
+    <div class="dash-profile col-4">
+      <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown" %>
+      <h3><%= current_user.full_name %></h3>
+      <hr>
+      <h4 class="header">My Interests</h4>
+        <% current_user.interests.each do |interest| %>
+      <p class="dash-content"><%= interest %></p>
+      <% end %>
+      <hr>
+      <h4 class="header">Skills</h4>
+      <%current_user.skills. each do|skill| %>
+        <p class="dash-content"><%= skill %></p>
+      <% end %>
+      <hr>
     </div>
-    <div class="dash-right col-8" style="padding-top: 110px;">
-      <div>
-        <div class="dash-card">
-          <%= image_tag "skill_logos/html.svg"%>
-        </div>
-
-        <div class="dash-card">
-          <%= image_tag "skill_logos/ruby.svg" %>
-        </div>
-
+    <div class="dashboard col-8">
+      <div class="dash-nav">
+        <%= link_to "My skills", dashboard_skills_path, class:"button-primary button-primary-small button-dash"%>
+        <%= link_to "My jobs", dashboard_jobs_path, class:"button-primary button-primary-small- button-dash"%>
       </div>
-
-      <div>
-        <div class="dash-card ">
-          <%= image_tag "skill_logos/javascript.svg" %>
+      <div class="dash-right" style="padding-top: 110px;">
+        <div>
+          <div class="dash-card">
+            <%= image_tag "skill_logos/html.svg"%>
+          </div>
+          <div class="dash-card">
+            <%= image_tag "skill_logos/ruby.svg" %>
+          </div>
         </div>
 
-        <div class="dash-card ">
-          <%= image_tag "skill_logos/sql.svg" %>
+        <div>
+          <div class="dash-card ">
+            <%= image_tag "skill_logos/javascript.svg" %>
+          </div>
+          <div class="dash-card ">
+            <%= image_tag "skill_logos/sql.svg" %>
+          </div>
         </div>
       </div>
-
-    </div>
+  </div>
   </div>
 </main>
