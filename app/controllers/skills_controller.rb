@@ -4,7 +4,7 @@ class SkillsController < ApplicationController
     @skill = Skill.find(params[:id])
     @resources = []
     @skill.resources.each do |r|
-        @resources << eval(r)
+    @resources << eval(r)
     end
 
     @beginner_resources = @resources.select { |res_hash| res_hash[:difficulties] == 'beginner' }
