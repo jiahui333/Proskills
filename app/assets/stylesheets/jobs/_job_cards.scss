@@ -32,20 +32,23 @@ a{
 
   cursor: pointer;
 
-    h3{
-      color: $lightpurple;
-    }
-    .job-top p{
-      display: inline
-    }
-
-    hr {
-    border: none;
-    border-top: 0.3rem dotted $darkblue;
-    height: 1px;
-    background-color: transparent;
-    opacity: .8;
+  hr {
+  margin: 0;
+  width: 100%;
+  border: none;
+  border-top: 0.3rem dotted $darkblue;
+  height: 1px;
+  background-color: transparent;
+  opacity: .8;
   }
+
+  h3{
+    color: $lightpurple;
+  }
+  .job-top p{
+    display: inline
+  }
+
 
   .job-description{
     display: none;
