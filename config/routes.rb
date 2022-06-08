@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   get "/steptwo", to: "pages#steptwo", as: :steptwo
   get "dashboard", to: "pages#dashboard"
 
+  get "/apply_send", to: "jobs#apply_send", as: :apply_send
   # get "skills/:id", to: "skills#show"
   resources :skills, only: [:index, :show] do
     resources :favorites, only: [:create]
