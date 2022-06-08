@@ -7,9 +7,9 @@ class UserMailer < ApplicationMailer
   #
   def apply
     @greeting = "Hi"
-    @why-company = params["why-company"]
-    @why-role = params["why-role"]
-    @why-choose = params["why-choose"]
+    # @why-company = params["why-company"]
+    # @why-role = params["why-role"]
+    # @why-choose = params["why-choose"]
     mail to: "forestlin333@gmail.com"
   end
 end

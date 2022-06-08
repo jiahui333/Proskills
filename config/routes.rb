@@ -13,6 +13,8 @@ Rails.application.routes.draw do
     resources :favorites, only: [:create]
   end
 
+  resources :favorites, only: [:destroy]
+
   get "dashboard/skills", to: "pages#dashboardmyskills"
   get "dashboard/jobs", to: "pages#dashboardmyjobs"
   resources :skills, only: [:index, :show]

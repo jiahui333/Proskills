@@ -155,3 +155,14 @@
   padding: 10px;
   tab-size: 4;
 }
+
+.language-title i {
+  display: flex;
+  margin-left: 300px;
+  align-items: center;
+  color: rgba(219, 17, 17, 0.779);
+  margin-top: 17px;
+  &:hover {
+  color: rgb(255, 0, 0);
+  }
+}

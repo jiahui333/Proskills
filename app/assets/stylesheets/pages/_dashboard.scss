@@ -1,5 +1,5 @@
 .dashboard-page{
-  height: 660px;
+  height: 900px;
   h1{
     font-size: 28px;
     &:first-child{
@@ -7,19 +7,35 @@
     }
   }
 
-  .dashboard{
-    height: 580px;
-    width: 1000px;
+  .dash-profile{
+    // display: flex;
+    // flex-direction: row;
+    height: 480px;
+    // width: 300px;
     background-color: $darkblue;
-    border-radius: 40% 60% 36% 64% / 47% 46% 54% 53%;
-    margin-left: 400px;
+    box-shadow: 0.5rem 0.5rem rgba(89, 82, 159, 0.35);
+    margin: 50px 10px;
+    border-radius: 5px;
+    text-align: center;
+    color: $white;
+  }
+
+  .dashboard{
+    display: flex;
+    flex-direction: row;
+    height: 480px;
+    // width: 600px;
+    background-color: $darkblue;
+    box-shadow: 0.5rem 0.5rem rgba(89, 82, 159, 0.35);
+    margin: 50px 10px;
+    border-radius: 5px;
 
     .dash-left{
       display: flex;
       flex-direction: column;
       gap: 10%;
       padding-top: 210px;
-      padding-left: 100px;
+      padding-left: 10px;
       color:$white;
     }
 
@@ -50,5 +66,30 @@
 
 .welcome {
   margin-top: 50px;
-  margin-left: 150px;
+}
+
+.dash-nav {
+  margin-top: 32px;
+}
+
+.dash-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin-top: 30px;
+}
+
+.header {
+  margin-top: 10px;
+}
+
+hr {
+  height: 2px;
+  width: 290px;
+  margin-left: 30px;
+}
+
+.dash-content {
+  margin-top: 5px;
+  margin-bottom: 10px;
 }
