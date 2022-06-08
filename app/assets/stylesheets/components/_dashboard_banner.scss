@@ -1,0 +1,28 @@
+.job-banner{
+  padding-top: 20px;
+  background-color: $lightblue;
+  color: $lightpurple;
+  height: 200px;
+
+  .banner-text{
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    position: relative;
+
+  .item {
+    display: flex;
+    flex-direction: row;
+  }
+  }
+}
+
+.fa-brands{
+  color: $darkblue;
+  font-size: 2.5rem;
+  padding: 9px;
+}
+
+.welcome {
+  margin-top: 15px !important;
+}
