@@ -4,7 +4,7 @@
 
 <div class="apply-modal">
 </div>
-
+<%# UserMailer.apply.deliver_now %>
 <% if user_signed_in? %>
   <div class="signed-in"></div>
 <% end %>
@@ -16,7 +16,7 @@
       <%= text_field_tag :query,
         params[:query],
         class: "form-control job-search-fill",
-        placeholder: "Type your programming skill"
+        placeholder: "Type your programming skill e.g. ruby"
       %>
       <%= submit_tag "Search", class: "button-primary" %>
     <% end %>

@@ -12,4 +12,11 @@ class JobsController < ApplicationController
   def show
     @job = Job.find_by(id: params[:id])
   end
+
+  def apply_send
+
+    # mail = UserMailer.apply
+    # # mail.delivery_now
+    # redirect_to jobs_path
+  end
 end
