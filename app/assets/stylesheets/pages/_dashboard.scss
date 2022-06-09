@@ -2,9 +2,6 @@
   height: 900px;
   h1{
     font-size: 28px;
-    &:first-child{
-      margin-bottom: 2rem;
-    }
   }
 
   .dash-profile{
@@ -71,15 +68,14 @@
   text-align: center;
 }
 
-.welcome {
-  margin-top: 50px;
-}
+// .welcome {
+//   margin-top: 50px;
+// }
 
 .dash-nav {
   margin-top: 45px;
   color: $white;
   text-align: center;
-  font-family: $headers-font !important;
 }
 
 
