@@ -1,45 +1,44 @@
+
 <main class="dashboard-page">
   <%= render "dashboard_banner" %>
   </div>
   <div class="container dash-wrapper">
     <div class="dash-profile col-4">
-      <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown" %>
+      <%= image_tag "profile_picture.png", class: "avatar-bordered dropdown-toggle", id: "navbarDropdown" %>
       <h3><%= current_user.full_name %></h3>
+      <%= Date.today %>
       <hr>
-      <h4 class="header">My Interests</h4>
+      <h5 class="header">My Interests</h5>
         <% current_user.interests.each do |interest| %>
       <p class="dash-content"><%= interest %></p>
       <% end %>
       <hr>
-      <h4 class="header">Skills</h4>
+      <h5 class="header">My Skills</h5>
       <%current_user.skills. each do|skill| %>
         <p class="dash-content"><%= skill %></p>
       <% end %>
-      <hr>
     </div>
     <div class="dashboard col-8">
       <div class="dash-nav">
-        <%= link_to "My skills", dashboard_skills_path, class:"button-primary button-primary-small button-dash"%>
-        <%= link_to "My jobs", dashboard_jobs_path, class:"button-primary button-primary-small- button-dash"%>
+       <h1><%= "Favorite Skills"%></h1>
       </div>
-      <div class="dash-right" style="padding-top: 110px;">
-        <div>
-          <div class="dash-card">
-            <%= image_tag "skill_logos/html.svg"%>
-          </div>
-          <div class="dash-card">
-            <%= image_tag "skill_logos/ruby.svg" %>
-          </div>
+      <div class="dash-right" style="padding-top: 40px;margin-left: 30px;">
+        <div class="row w-100 justify-content-around">
+          <% @favorites.each do |favorite| %>
+            <%= link_to skill_path(id: favorite.skill.id), class:"col-3" do %>
+              <div class="card-small">
+                <div style="background-color: <%= favorite.skill.color %>; color: white; display: flex; align-items: center; justify-content: center;">
+                  <% if favorite.skill.name == "C++" %>
+                    <%= image_tag "skill_logos/c.svg" %>
+                  <% else %>
+                    <%= image_tag "skill_logos/#{favorite.skill.name.downcase}.svg" %>
+                  <% end %>
+                </div>
+              </div>
+            <% end %>
+          <% end %>
         </div>
 
-        <div>
-          <div class="dash-card ">
-            <%= image_tag "skill_logos/javascript.svg" %>
-          </div>
-          <div class="dash-card ">
-            <%= image_tag "skill_logos/sql.svg" %>
-          </div>
-        </div>
       </div>
   </div>
   </div>
