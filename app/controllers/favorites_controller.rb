@@ -5,6 +5,7 @@ class FavoritesController < ApplicationController
     @favorite.skill = @skill
     @favorite.user = current_user
     @favorite.save!
+
     redirect_to skill_path(@skill)
   end
 

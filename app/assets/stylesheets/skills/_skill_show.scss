@@ -162,11 +162,15 @@
 
 .language-title i {
   display: flex;
-  margin-left: 300px;
+  margin-right: 0;
   align-items: center;
   color: rgba(219, 17, 17, 0.779);
   margin-top: 17px;
   &:hover {
   color: rgb(255, 0, 0);
   }
+}
+
+.a-tag {
+  margin-left: 350px;
 }
