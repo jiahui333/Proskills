@@ -3,16 +3,16 @@
   <div class="skill-top row">
 
     <div class="language-card col-6 pe-5">
-      <div class="language-title">
+      <div class="language-title" data-controller="favorites">
         <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo" %>
-        <h1> <%= @skill.name %> </h1>
+        <h1 data-action="click=>favorites#like"> <%= @skill.name %> </h1>
 
         <% if !Favorite.find_by(user_id: current_user.id, skill_id: @skill.id) %>
-          <%= link_to skill_favorites_path(@skill.id), method: :post do %>
-            <i class="fa-regular fa-heart fa-xl"></i>
+          <%= link_to skill_favorites_path(@skill.id), method: :post, remote: true, class:"a-tag", data: {favorites_target: "like", action: "click=>favorites#like"} do  %>
+            <i class="fa-regular fa-heart fa-xl" ></i>
           <% end %>
         <% else %>
-          <%= link_to favorite_path(Favorite.find_by(user_id: current_user.id, skill_id: @skill.id)), method: :delete do %>
+          <%= link_to favorite_path(Favorite.find_by(user_id: current_user.id, skill_id: @skill.id)), method: :delete, remote: true, class:"a-tag", data: {favorites_target: "like"} do %>
             <i class="fa-solid fa-heart fa-xl"></i>
           <% end %>
         <% end %>
