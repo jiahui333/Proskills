@@ -29,7 +29,7 @@ const modal= () => {
             <button class="close-button"> X </button>
             <h2 class="form-title"> Application Form </h2>
 
-            <form action="">
+            <form action="/confirm">
             <label for="why-company">Why do you want to work at this company?</label><br>
             <textarea id="why-company" name="why-company" class="why-company"></textarea>
             <label for="why-role">Why do you choose this role?</label><br>
@@ -43,7 +43,7 @@ const modal= () => {
             const send = document.querySelector(".button-apply")
 
             send.addEventListener (("click"),(event) => {
-              alert("Great! You job application has been sent!");
+              alert("We've sent your a confirmation. Check your email inbox :)");
             })
 
             const close_buttons = document.querySelectorAll(".close-button")
