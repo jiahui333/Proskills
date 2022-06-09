@@ -2,6 +2,7 @@
 # The data can then be loaded with the bin/rails db:seed command (or created alongside the database with db:setup).
 #
 
+Favorite.destroy_all
 User.destroy_all
 JobSkill.destroy_all
 Skill.destroy_all
