@@ -63,7 +63,7 @@ Rails.application.configure do
   # config.active_job.queue_name_prefix = "proskills_production"
 
   config.action_mailer.perform_caching = false
-  ActionMailer::Base.smtp_settings = {
+  config.action_mailer.smtp_settings. = {
   address: "smtp.gmail.com",
   port: 587,
   domain: 'gmail.com',
