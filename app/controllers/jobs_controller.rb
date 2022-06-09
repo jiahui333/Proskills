@@ -12,6 +12,7 @@ class JobsController < ApplicationController
   end
 
   def confirm
-
+    JobMailer.job_sent(current_user).deliver_later
+    redirect_to jobs_path
   end
 end

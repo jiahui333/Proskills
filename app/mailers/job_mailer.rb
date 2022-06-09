@@ -5,9 +5,9 @@ class JobMailer < ApplicationMailer
   #
   #   en.job_mailer.job_sent.subject
   #
-  def job_sent
+  def job_sent(user)
     @greeting = "Hi"
-
-    mail to: User.last.email, subject: "Confirmation from Proskills"
+    @user = user
+    mail to: user.email, subject: "Confirmation from Proskills"
   end
 end
