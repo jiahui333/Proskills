@@ -73,12 +73,10 @@ Rails.application.configure do
   enable_starttls_auto: true
 }
 
-  Rails.application.configure do
 
-    config.action_mailer.delivery_method = :smtp
-    config.action_mailer.default_url_options = { host: "proskillsss.herokuapp.com" }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.default_url_options = { host: "https://proskillsss.herokuapp.com/" }
     # or your custom domain name eg. "www.yourdomain.com"
-  end
 
   # Ignore bad email addresses and do not raise email delivery errors.
   # Set this to true and configure the email server for immediate delivery to raise delivery errors.
