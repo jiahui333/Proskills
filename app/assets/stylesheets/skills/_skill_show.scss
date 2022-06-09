@@ -1,7 +1,7 @@
 .show-page{
   height: 1200px;
   padding: 64px 140px 0;
-  margin: 0 auto;
+  margin: 0 auto 170px;
 }
 
 .skill-top{
@@ -15,8 +15,20 @@
     justify-content: space-between;
     gap: 1.2rem;
 
+    i {
+      display: flex;
+      margin-right: 0;
+      align-items: center;
+      color: rgba(219, 17, 17, 0.779);
+      margin-top: 17px;
+      &:hover {
+      color: rgb(255, 0, 0);
+      }
+    }
+
     .skill-logo{
     height: 36px;
+
     }
 
   }
@@ -141,32 +153,5 @@
       top: 140px;
     }
 
-
-  }
-}
-
-
-
-.editor {
-  border-radius: 6px;
-  box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px 0 rgba(0, 0, 0, 0.12), 0 3px 1px -2px rgba(0, 0, 0, 0.2);
-  font-family: 'Source Code Pro', monospace;
-  font-size: 14px;
-  font-weight: 400;
-  height: 340px;
-  letter-spacing: normal;
-  line-height: 20px;
-  padding: 10px;
-  tab-size: 4;
-}
-
-.language-title i {
-  display: flex;
-  margin-right: 0;
-  align-items: center;
-  color: rgba(219, 17, 17, 0.779);
-  margin-top: 17px;
-  &:hover {
-  color: rgb(255, 0, 0);
   }
 }
