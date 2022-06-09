@@ -18,11 +18,18 @@
     border-radius: 5px;
     text-align: center;
     color: $white;
+
+    hr {
+      height: 2px;
+      width: 290px;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
   }
 
   .dashboard{
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
     height: 480px;
     // width: 600px;
     background-color: $darkblue;
@@ -69,8 +76,12 @@
 }
 
 .dash-nav {
-  margin-top: 32px;
+  margin-top: 45px;
+  color: $white;
+  text-align: center;
+  font-family: $headers-font !important;
 }
+
 
 .dash-wrapper {
   display: flex;
@@ -83,11 +94,6 @@
   margin-top: 10px;
 }
 
-hr {
-  height: 2px;
-  width: 290px;
-  margin-left: 30px;
-}
 
 .dash-content {
   margin-top: 5px;
