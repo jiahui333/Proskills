@@ -27,7 +27,7 @@
           <% @favorites.each do |favorite| %>
             <%= link_to skill_path(id: favorite.skill.id), class:"col-3" do %>
               <div class="card-small">
-                <div style="background-color: <%= favorite.skill.color %>; color: white; display: flex; align-items: center; justify-content: center;">
+                <div style="background-color: <%= favorite.skill.color %>; color: white; display: flex; align-items: center; justify-content: center; border-radius: 5px;">
                   <% if favorite.skill.name == "C++" %>
                     <%= image_tag "skill_logos/c.svg" %>
                   <% else %>

@@ -19,7 +19,13 @@
   border: 0ch;
   box-shadow: 0.5rem 0.5rem rgba(89, 82, 159, 0.35);
   padding: 0px;
+
+  &:hover {
+    width: 155px !important;
+  height: 155px !important;
+  }
 }
+
 .container {
   position: relative;
   max-width: 1100px;
@@ -255,6 +261,12 @@
     transform: scale3d(1.05, 1.05, 1.05) // // background-color: $darkpurple;
       // box-shadow: 9px 8px 0px $darkpurple;
     // transform: scale3d(1.05, 1.05, 1.05);
+  }
+}
+
+.text-center {
+  .button-primary {
+    margin-left: 16px;
   }
 }
 
