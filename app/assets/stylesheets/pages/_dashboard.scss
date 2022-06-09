@@ -2,9 +2,6 @@
   height: 900px;
   h1{
     font-size: 28px;
-    &:first-child{
-      margin-bottom: 2rem;
-    }
   }
 
   .dash-profile{
@@ -18,11 +15,18 @@
     border-radius: 5px;
     text-align: center;
     color: $white;
+
+    hr {
+      height: 2px;
+      width: 290px;
+      margin-left: 30px;
+      margin-top: 10px;
+    }
   }
 
   .dashboard{
-    display: flex;
-    flex-direction: row;
+    // display: flex;
+    // flex-direction: row;
     height: 480px;
     // width: 600px;
     background-color: $darkblue;
@@ -64,13 +68,16 @@
   text-align: center;
 }
 
-.welcome {
-  margin-top: 50px;
-}
+// .welcome {
+//   margin-top: 50px;
+// }
 
 .dash-nav {
-  margin-top: 32px;
+  margin-top: 45px;
+  color: $white;
+  text-align: center;
 }
+
 
 .dash-wrapper {
   display: flex;
@@ -83,11 +90,6 @@
   margin-top: 10px;
 }
 
-hr {
-  height: 2px;
-  width: 290px;
-  margin-left: 30px;
-}
 
 .dash-content {
   margin-top: 5px;

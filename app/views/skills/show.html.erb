@@ -3,10 +3,12 @@
   <div class="skill-top row">
 
     <div class="language-card col-6 pe-5">
-      <div class="language-title" data-controller="favorites">
-        <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo" %>
-        <h1 data-action="click=>favorites#like"> <%= @skill.name %> </h1>
-
+      <div class="language-title">
+        <div class="d-flex">
+          <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo me-2" %>
+          <h1> <%= @skill.name %> </h1>
+        </div>
+      <% if user_signed_in? %>
         <% if !Favorite.find_by(user_id: current_user.id, skill_id: @skill.id) %>
           <%= link_to skill_favorites_path(@skill.id), method: :post, remote: true, class:"a-tag", data: {favorites_target: "like", action: "click=>favorites#like"} do  %>
             <i class="fa-regular fa-heart fa-xl" ></i>
@@ -16,6 +18,9 @@
             <i class="fa-solid fa-heart fa-xl"></i>
           <% end %>
         <% end %>
+      <% else %>
+        <i></i>
+      <% end %>
       </div>
 
       <p><%= @skill.description %></p>
@@ -33,6 +38,8 @@
     </div>
   </div>
 
+<%# <div class="row"> %>
+  <%# <div class="col-3"></div> %>
   <div class="skill-bottom">
     <div class="skill-person">
       <%= image_tag "skill_sitting.svg" %>
@@ -49,8 +56,8 @@
       </div>
     <% end %>
 
-    <div class="resources">
-      <%= image_tag "resources_background.png", class:"resources-background" %>
+    <div class="resources", style="background-image: url(<%= image_path('resources_background.png')%>);">
+      <%#= image_tag "resources_background.png", class:"resources-background" %>
 
       <div class=" <%= current_user ? "" : "blur" %> resources-cards resources-card1">
         <h3>Beginner</h3>
@@ -81,7 +88,8 @@
     </div>
 
   </div>
-
+  <%# <div class="col-3"></div> %>
+<%# </div> %>
 </main>
 
 

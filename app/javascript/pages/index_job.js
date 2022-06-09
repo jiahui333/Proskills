@@ -70,6 +70,11 @@ const modal= () => {
           <a href="", class="button-apply m-0">Sign up to apply</a>
           </div>`
 
+          const apply_sign = document.querySelector(".button-apply")
+          apply_sign.addEventListener("click",(event) => {
+            window.location.href="/users/sign_up";
+          })
+
         }
 
         const close_buttons = document.querySelectorAll(".close-button")

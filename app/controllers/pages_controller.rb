@@ -1,3 +1,4 @@
+require 'date'
 class PagesController < ApplicationController
   def home
 
@@ -36,15 +37,17 @@ class PagesController < ApplicationController
       redirect_to jobs_path
   end
 
+  def dashboardmyskills
+    @favorites = current_user.favorites
+  end
+
   private
 
   def user_params
     params.require(:user).permit(:full_name, :username, :student, :skills, :developer, :form_completed, interests: [])
   end
 
-  def dashboardmyskills
 
-  end
 
   def dashboardmyjobs
   end
