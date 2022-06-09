@@ -1,6 +1,7 @@
 .show-page{
   height: 1200px;
   padding: 64px 140px 0;
+  margin: 0 auto;
 }
 
 .skill-top{
@@ -11,6 +12,7 @@
 
   .language-title {
     display: flex;
+    justify-content: space-between;
     gap: 1.2rem;
 
     .skill-logo{
@@ -44,14 +46,14 @@
       padding: 25px;
 
       position: absolute;
-      top: -450px;
+      top: 40px;
       left: 180px;
     }
 
     img{
       height: 310px;
       position: absolute;
-      top: -430px;
+      top: 50px;
       z-index: 1;
     }
   }
@@ -84,6 +86,8 @@
 
   .resources{
     margin-bottom: 500px;
+    height:720px;
+    background-size: 100%;
     h3{
       font-family: $headers-font;
       color: $darkpurple;
@@ -125,16 +129,16 @@
     }
 
     .resources-card1{
-      left: 100px;
-      top: -60px;
+      left: 10%;
+      top: 420px;
     }
     .resources-card2{
-      left: 480px;
-      top: -190px;
+      left: 40%;
+      top: 280px;
     }
     .resources-card3{
-      left: 860px;
-      top: -320px;
+      left: 70%;
+      top: 140px;
     }
 
 
