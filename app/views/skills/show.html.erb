@@ -10,11 +10,11 @@
         </div>
       <% if user_signed_in? %>
         <% if !Favorite.find_by(user_id: current_user.id, skill_id: @skill.id) %>
-          <%= link_to skill_favorites_path(@skill.id), method: :post, remote: true, class:"a-tag", data: {favorites_target: "like", action: "click=>favorites#like"} do  %>
+          <%= link_to skill_favorites_path(@skill.id), method: :post, remote: true, data: {favorites_target: "like", action: "click=>favorites#like"} do  %>
             <i class="fa-regular fa-heart fa-xl" ></i>
           <% end %>
         <% else %>
-          <%= link_to favorite_path(Favorite.find_by(user_id: current_user.id, skill_id: @skill.id)), method: :delete, remote: true, class:"a-tag", data: {favorites_target: "like"} do %>
+          <%= link_to favorite_path(Favorite.find_by(user_id: current_user.id, skill_id: @skill.id)), method: :delete, remote: true, data: {favorites_target: "like"} do %>
             <i class="fa-solid fa-heart fa-xl"></i>
           <% end %>
         <% end %>
