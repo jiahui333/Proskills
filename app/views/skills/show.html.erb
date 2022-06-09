@@ -6,7 +6,7 @@
       <div class="language-title">
         <%= image_tag "skill_logos/#{@skill.name == "C++" ? "c" : @skill.name.downcase}.svg", class:"skill-logo" %>
         <h1> <%= @skill.name %> </h1>
-
+      <% if user_signed_in? %>
         <% if !Favorite.find_by(user_id: current_user.id, skill_id: @skill.id) %>
           <%= link_to skill_favorites_path(@skill.id), method: :post do %>
             <i class="fa-regular fa-heart fa-xl"></i>
@@ -16,6 +16,9 @@
             <i class="fa-solid fa-heart fa-xl"></i>
           <% end %>
         <% end %>
+      <% else %>
+        <i></i>
+      <% end %>
       </div>
 
       <p><%= @skill.description %></p>

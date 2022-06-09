@@ -18,5 +18,7 @@ import "bootstrap"
 import {modal} from "pages/index_job"
 
 document.addEventListener('turbolinks:load', () => {
-  modal()
+  if(document.querySelector(".job-modal")) {
+    modal()
+  }
 });
