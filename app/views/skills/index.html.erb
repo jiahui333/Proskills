@@ -1,8 +1,8 @@
-<%= render "components/skill_banner" %>
-<div class="text-center">
-<%= link_to "Front end", skills_path(query: "frontend"), class: "filter_front"%>
-<%= link_to "Back end", skills_path(query: "backend"), class: "filter_back" %>
-<%= link_to "All", skills_path(query: "all"), class: "filter_all" %>
+<%= render "skill_banner" %>
+<div class="text-center m-5">
+<%= link_to "Front end", skills_path(query: "frontend"), class: "button-primary"%>
+<%= link_to "Back end", skills_path(query: "backend"), class: "button-primary" %>
+<%= link_to "All", skills_path(query: "all"), class: "button-primary" %>
 </div>
 <div class="container">
   <div class="row">
