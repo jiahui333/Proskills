@@ -7,7 +7,7 @@
 <div class="container">
   <div class="row">
     <% @skills.each do |skill| %>
-      <%= link_to skill_path(id: skill.id), class: "skills-cards-link col-3" do %>
+      <%= link_to skill_path(id: skill.id), class: "skills-cards-link col-lg-3 col-md-4 col-sm-6" do %>
         <div class="card">
           <div class="imgbx">
             <div class="mytext" style="height: 100%; width: 100%; background-color: <%= skill.color %>; color: white; display: flex; align-items: center; justify-content: center;">
