@@ -1,8 +1,14 @@
 // Specific CSS for your home-page
 .landing-page{
   min-height:90vh;
+  @include media-breakpoint-up(md){
+    padding: 100px 150px 10px;
+  }
 
-  padding: 100px 150px 0;
+  @include media-breakpoint-down(md){
+    padding: 100px 50px 10px;
+  }
+
 
   .home-left{
     padding:0;
@@ -18,146 +24,258 @@
     }
   }
 
+
   .home-right{
-    position:relative;
+    @include media-breakpoint-up(md) {
+      position:relative;
 
-    img{
-      height:360px;
-      z-index: 1;
-    }
-
-    @keyframes changewidth {
-      from {
-        transform: translateX(0px);
+      img{
+        height:360px;
+        z-index: 1;
       }
 
-      to {
-        transform: translateX(12px);
-      }
-    }
-
-    @keyframes changewidth2 {
-      from {
-        transform: translateX(0px);
-      }
-
-      to {
-        transform: translateX(-12px);
-      }
-    }
-
-    .student {
-
-      position: absolute;
-      top: 20%;
-      left: 4%;
-      z-index: 1;
-
-
-      &:hover {
-        .quote-student{
-          animation-duration: .8s;
-          animation-name: changewidth2;
-          animation-iteration-count: infinite;
-          animation-direction: alternate;
+      @keyframes changewidth {
+        from {
+          transform: translateX(0px);
         }
 
-        img {
-          animation-duration: .8s;
-          animation-name: changewidth;
-          animation-iteration-count: infinite;
-          animation-direction: alternate;
+        to {
+          transform: translateX(12px);
         }
       }
 
-    }
-
-    @keyframes changewidth3 {
-      from {
-        transform: translateX(0px);
-      }
-
-      to {
-        transform: translateX(-12px);
-      }
-    }
-
-    @keyframes changewidth4 {
-      from {
-        transform: translateX(0px);
-      }
-
-      to {
-        transform: translateX(12px);
-      }
-    }
-
-    .jobseeker {
-
-      position: absolute;
-      left: 52%;
-      z-index: 1;
-
-
-      &:hover {
-        .quote-jobseeker{
-          animation-duration: .8s;
-          animation-name: changewidth3;
-          animation-iteration-count: infinite;
-          animation-direction: alternate;
+      @keyframes changewidth2 {
+        from {
+          transform: translateX(0px);
         }
 
-        img {
-          animation-duration: .8s;
-          animation-name: changewidth4;
-          animation-iteration-count: infinite;
-          animation-direction: alternate;
+        to {
+          transform: translateX(-12px);
         }
       }
 
-    }
+      .student {
 
-    .quote{
-      color: $darkpurple;
-      height: 200px;
-      width: 200px;
-      border-radius: 50%;
-      background-color: $lightblue;
-      display: flex;
-      align-items: center;
-      text-align: center;
-      box-shadow: 3px 3px $darkblue;
-      z-index: -1;
-    }
+        position: absolute;
+        top: 20%;
+        left: 4%;
+        z-index: 1;
 
-    .quote-jobseeker{
-      position: absolute;
-      right: -52%;
-      top: -12%;
-    }
 
-    .quote-student{
-      position: absolute;
-      left: 60%;
-      top: -5%;
+        &:hover {
+          .quote-student{
+            animation-duration: .8s;
+            animation-name: changewidth2;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+
+          img {
+            animation-duration: .8s;
+            animation-name: changewidth;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+        }
+
+      }
+
+      @keyframes changewidth3 {
+        from {
+          transform: translateX(0px);
+        }
+
+        to {
+          transform: translateX(-12px);
+        }
+      }
+
+      @keyframes changewidth4 {
+        from {
+          transform: translateX(0px);
+        }
+
+        to {
+          transform: translateX(12px);
+        }
+      }
+
+      .jobseeker {
+
+        position: absolute;
+        left: 52%;
+        z-index: 1;
+
+
+        &:hover {
+          .quote-jobseeker{
+            animation-duration: .8s;
+            animation-name: changewidth3;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+
+          img {
+            animation-duration: .8s;
+            animation-name: changewidth4;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+        }
+
+      }
+
+      .quote{
+        color: $darkpurple;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: $lightblue;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        box-shadow: 3px 3px $darkblue;
+        z-index: -1;
+      }
+
+      .quote-jobseeker{
+        position: absolute;
+        right: -52%;
+        top: -12%;
+      }
+
+      .quote-student{
+        position: absolute;
+        left: 60%;
+        top: -5%;
+      }
     }
   }
-}
+
+  .home-right{
+    @include media-breakpoint-down(md) {
+      position:relative;
+
+      img{
+        height:360px;
+        z-index: 1;
+      }
+
+      @keyframes changewidth {
+        from {
+          transform: translateX(0px);
+        }
+
+        to {
+          transform: translateX(12px);
+        }
+      }
+
+      @keyframes changewidth2 {
+        from {
+          transform: translateX(0px);
+        }
+
+        to {
+          transform: translateX(-12px);
+        }
+      }
+
+      .student {
+
+        // position: absolute;
+        // top: 20%;
+        // left: 4%;
+        z-index: 1;
 
 
-.flip-card-student-front,
-.flip-card-student-back {
-  overflow:hidden;
-  backface-visibility:hidden;
-  position:absolute;
-  transition: transform .5s linear;
-}
-.flip-card-student:hover > .flip-card-student-front{
-  transform: perspective(600px) rotateY(-180deg);
-}
-.flip-card-student:hover > .flip-card-student-back{
-  transform: perspective(600px) rotateY(0deg);
-}
-.flip-card-student-back{
-  transform:rotateY(180deg);
+        &:hover {
+          .quote-student{
+            animation-duration: .8s;
+            animation-name: changewidth2;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+
+          img {
+            animation-duration: .8s;
+            animation-name: changewidth;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+        }
+
+      }
+
+      @keyframes changewidth3 {
+        from {
+          transform: translateX(0px);
+        }
+
+        to {
+          transform: translateX(-12px);
+        }
+      }
+
+      @keyframes changewidth4 {
+        from {
+          transform: translateX(0px);
+        }
+
+        to {
+          transform: translateX(12px);
+        }
+      }
+
+      .jobseeker {
+
+        // position: absolute;
+        // left: 52%;
+        z-index: 1;
+
+
+        &:hover {
+          .quote-jobseeker{
+            animation-duration: .8s;
+            animation-name: changewidth3;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+
+          img {
+            animation-duration: .8s;
+            animation-name: changewidth4;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+          }
+        }
+
+      }
+
+      .quote{
+        color: $darkpurple;
+        height: 200px;
+        width: 200px;
+        border-radius: 50%;
+        background-color: $lightblue;
+        display: flex;
+        align-items: center;
+        text-align: center;
+        box-shadow: 3px 3px $darkblue;
+        z-index: -1;
+      }
+
+      .quote-jobseeker{
+        position: absolute;
+        left: 210px;
+        bottom: 22%;
+      }
+
+      .quote-student{
+        position: absolute;
+        left: 150px;
+        top: -5%;
+      }
+    }
+  }
 }
